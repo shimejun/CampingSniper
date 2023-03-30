@@ -25,15 +25,9 @@ function owgame:phases/area_damage
 execute as @a at @s run function owgame:items/item_using
 
 #伏せ
-execute as @a[predicate=owgame:sneak,nbt={SelectedItem:{id:"minecraft:spyglass"},OnGround:1b}] at @s unless block ~ ~-1 ~ air unless block ~ ~1 ~ #minecraft:slabs run function owgame:actions/down
-execute as @a[predicate=owgame:sneak,nbt={SelectedItem:{id:"minecraft:stick"},OnGround:1b}] at @s unless block ~ ~-1 ~ air unless block ~ ~1 ~ #minecraft:slabs run function owgame:actions/down
-effect give @a[scores={sneak=10}] slowness 1 10 true
-execute as @a[scores={sneak=10}] at @s unless block ~ ~1 ~ tinted_glass run scoreboard players set @s jump 1
-effect clear @a[scores={jump=1..,sneak=1..}] slowness
-execute as @a[scores={jump=1..,sneak=10}] at @s run fill ~-1 ~2 ~-1 ~1 ~1 ~1 air replace tinted_glass
-scoreboard players set @a[scores={jump=1..}] sneak 0
-tag @a[scores={jump=1..}] remove downed
-scoreboard players reset @a jump
+execute as @a[predicate=owgame:sneak,nbt={SelectedItem:{id:"minecraft:spyglass"},OnGround:1b}] at @s unless block ~ ~-1 ~ air unless block ~ ~1 ~ #minecraft:slabs if block ~ ~ ~ #owgame:noblock run function owgame:actions/down
+execute as @a[predicate=owgame:sneak,nbt={SelectedItem:{id:"minecraft:stick"},OnGround:1b}] at @s unless block ~ ~-1 ~ air unless block ~ ~1 ~ #minecraft:slabs if block ~ ~ ~ #owgame:noblock run function owgame:actions/down
+execute as @a[scores={sneak=10}] at @s run function owgame:actions/lay
 #空腹度
 execute as @a[scores={hunger=19..20}] at @s run effect give @s speed 1 0 true
 execute as @a[scores={hunger=..10}] at @s run effect give @s slowness 1 0 true
@@ -50,7 +44,6 @@ item replace entity @a[scores={shootcounts=0,ammo_sr=1},nbt={SelectedItem:{id:"m
 execute as @a[scores={shootcounts=1..,ammo_sr=1..},nbt={Inventory:[{id:"minecraft:stick",tag:{sr_r:1b},Slot:-106b}]}] at @s run function owgame:weapons/kraber/shoot_while_cd
 
 #体力表示
-
 execute as @a[scores={health=300..,immunity=0,ammoes=4},gamemode=!spectator] at @s run title @s actionbar [{"text":" || ","color":"gold"},{"score":{"name":"@s","objective":"health"},"color":"green"},{"text":"/300❤","color":"green"},{"text":" || ","color":"gold"},{"score":{"name":"@s","objective":"damage_total"},"color":"red"},{"text":"-","color":"red"},{"score":{"name":"@s","objective":"damage_total2"},"color":"red"},{"text":"❄/","color":"red"},{"score":{"name":"@s","objective":"kill"},"color":"red"},{"text":"☠","color":"red"},{"text":" || ","color":"gold"},{"text":"|||| ","color":"gray","bold":true},{"text":"◎","color":"gray"},{"text":" || ","color":"gold"}]
 execute as @a[scores={health=300..,immunity=0,ammoes=3},gamemode=!spectator] at @s run title @s actionbar [{"text":" || ","color":"gold"},{"score":{"name":"@s","objective":"health"},"color":"green"},{"text":"/300❤","color":"green"},{"text":" || ","color":"gold"},{"score":{"name":"@s","objective":"damage_total"},"color":"red"},{"text":"-","color":"red"},{"score":{"name":"@s","objective":"damage_total2"},"color":"red"},{"text":"❄/","color":"red"},{"score":{"name":"@s","objective":"kill"},"color":"red"},{"text":"☠","color":"red"},{"text":" || ","color":"gold"},{"text":"|","color":"dark_gray","bold":true},{"text":"||| ","color":"gray","bold":true},{"text":"◎","color":"gray"},{"text":" || ","color":"gold"}]
 execute as @a[scores={health=300..,immunity=0,ammoes=2},gamemode=!spectator] at @s run title @s actionbar [{"text":" || ","color":"gold"},{"score":{"name":"@s","objective":"health"},"color":"green"},{"text":"/300❤","color":"green"},{"text":" || ","color":"gold"},{"score":{"name":"@s","objective":"damage_total"},"color":"red"},{"text":"-","color":"red"},{"score":{"name":"@s","objective":"damage_total2"},"color":"red"},{"text":"❄/","color":"red"},{"score":{"name":"@s","objective":"kill"},"color":"red"},{"text":"☠","color":"red"},{"text":" || ","color":"gold"},{"text":"||","color":"dark_gray","bold":true},{"text":"|| ","color":"gray","bold":true},{"text":"◎","color":"gray"},{"text":" || ","color":"gold"}]
