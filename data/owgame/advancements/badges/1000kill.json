@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "千の終焉を語る者"
+        },
+        "description": {
+            "text": "累計1000キルを達成する(隠し実績！)"
+        },
+        "icon": {
+            "item": "minecraft:nether_wart_block"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/500kill"
+}

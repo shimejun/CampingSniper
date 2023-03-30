@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "出会いは突然に"
+        },
+        "description": {
+            "text": "無敵時間中に敵に弾を命中させる(隠し実績！)"
+        },
+        "icon": {
+            "item": "minecraft:ghast_tear"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/1kill"
+}

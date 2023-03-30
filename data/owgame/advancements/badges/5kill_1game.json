@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "殲滅戦"
+        },
+        "description": {
+            "text": "バトルロワイアルで、1ゲーム中に5キルを達成する"
+        },
+        "icon": {
+            "item": "minecraft:barrel"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/3kill_1game"
+}

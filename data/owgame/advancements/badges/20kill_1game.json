@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "爪痕を残せ"
+        },
+        "description": {
+            "text": "バトルロワイアルで、1ゲーム中に20キルを達成する(隠し実績！)"
+        },
+        "icon": {
+            "item": "minecraft:diamond"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/10kill_1game"
+}

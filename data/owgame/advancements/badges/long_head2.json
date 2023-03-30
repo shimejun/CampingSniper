@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "何もかも解らぬまま"
+        },
+        "description": {
+            "text": "200m以上遠くの敵をヘッドショットで倒す(隠し実績！)"
+        },
+        "icon": {
+            "item": "minecraft:string"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/long_head"
+}

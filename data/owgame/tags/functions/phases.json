@@ -1,0 +1,19 @@
+{
+    "values": [
+        "owgame:phases/1s",
+        "owgame:phases/phase1",
+        "owgame:phases/phase1_close",
+        "owgame:phases/phase2",
+        "owgame:phases/phase2_close",
+        "owgame:phases/phase3",
+        "owgame:phases/phase3_close",
+        "owgame:phases/phase4",
+        "owgame:phases/phase4_close",
+        "owgame:phases/phase5",
+        "owgame:phases/phase5_close",
+        "owgame:phases/phase6",
+        "owgame:phases/phase6_close",
+        "owgame:phases/phase7"
+        
+    ]
+  }

@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "ヘッドハンター"
+        },
+        "description": {
+            "text": "1ゲーム中にヘッドショットで3キルする"
+        },
+        "icon": {
+            "item": "minecraft:zombie_head"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/head"
+}

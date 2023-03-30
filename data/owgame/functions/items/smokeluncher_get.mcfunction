@@ -1,0 +1,1 @@
+give @s crossbow{display:{Name:'{"text":"スモークランチャー","color":"aqua"}',Lore:['{"text":"「燻製料理にもってこい」","color":"gray","italic":true}','{"text":"着弾点でスモークを発生させる。使い捨て。"}']},HideFlags:37,Unbreakable:0b,Damage:464,Enchantments:[{id:"minecraft:piercing",lvl:1s},{id:"minecraft:quick_charge",lvl:2s}],ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b} 1

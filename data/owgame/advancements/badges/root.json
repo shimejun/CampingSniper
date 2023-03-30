@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "Badges"
+        },
+        "description": {
+            "text": "達成を目指そう！"
+        },
+        "icon": {
+            "item": "minecraft:spyglass"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

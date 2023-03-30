@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "遥かなる高み"
+        },
+        "description": {
+            "text": "累計100回勝利する"
+        },
+        "icon": {
+            "item": "minecraft:snow_block"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/10win"
+}

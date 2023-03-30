@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "達人スナイパー"
+        },
+        "description": {
+            "text": "累計1000ゲーム参加する"
+        },
+        "icon": {
+            "item": "minecraft:diamond_hoe"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/300play"
+}

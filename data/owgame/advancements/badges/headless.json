@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "ヘッドブレイカー"
+        },
+        "description": {
+            "text": "1ゲーム中にヘッドショットで5キルする(隠し実績！)"
+        },
+        "icon": {
+            "item": "minecraft:creeper_head"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/headhunter"
+}

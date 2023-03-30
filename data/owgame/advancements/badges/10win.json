@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "憧れの道標"
+        },
+        "description": {
+            "text": "累計10回勝利する"
+        },
+        "icon": {
+            "item": "minecraft:diamond_block"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/5win"
+}

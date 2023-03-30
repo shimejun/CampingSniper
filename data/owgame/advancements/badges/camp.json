@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "これぞ文明の火"
+        },
+        "description": {
+            "text": "焚き火を設置する"
+        },
+        "icon": {
+            "item": "minecraft:campfire"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/play"
+}

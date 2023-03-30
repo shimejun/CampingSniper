@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "まさに\"惨劇\""
+        },
+        "description": {
+            "text": "バトルロワイアルで、1ゲーム中に10キルを達成する"
+        },
+        "icon": {
+            "item": "minecraft:redstone_torch"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/5kill_1game"
+}

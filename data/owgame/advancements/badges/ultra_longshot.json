@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "遠方からの刺客"
+        },
+        "description": {
+            "text": "250m以上遠くの敵に弾を命中させる(隠し実績！)"
+        },
+        "icon": {
+            "item": "minecraft:dragon_head"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/longshot_2"
+}

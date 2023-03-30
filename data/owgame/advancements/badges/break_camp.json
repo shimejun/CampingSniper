@@ -1,0 +1,23 @@
+{
+  "display": {
+      "title": {
+          "text": "後始末は忘れずに"
+      },
+      "description": {
+          "text": "焚き火を撃って破壊する"
+      },
+      "icon": {
+          "item": "minecraft:soul_campfire"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": false,
+      "hidden": false
+  },
+  "criteria": {
+      "pex": {
+          "trigger": "minecraft:impossible"
+      }
+  },
+  "parent":"owgame:badges/camp"
+}

@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "近接戦はお断り"
+        },
+        "description": {
+            "text": "15m以内のナイフを持っている敵に、弾を命中させる"
+        },
+        "icon": {
+            "item": "minecraft:wooden_sword"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/knife"
+}

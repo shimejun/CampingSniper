@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "とんでもない油断"
+        },
+        "description": {
+            "text": "空中の敵にヘッドショットを命中させる"
+        },
+        "icon": {
+            "item": "minecraft:grass"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/fromsky"
+}

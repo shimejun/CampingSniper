@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "理不尽な一撃"
+        },
+        "description": {
+            "text": "150m以上遠くの敵をヘッドショットで倒す"
+        },
+        "icon": {
+            "item": "minecraft:skeleton_skull"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/longshot"
+}

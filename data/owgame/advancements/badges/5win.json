@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "天上を仰いで"
+        },
+        "description": {
+            "text": "累計5回勝利する"
+        },
+        "icon": {
+            "item": "minecraft:gold_block"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/3win"
+}

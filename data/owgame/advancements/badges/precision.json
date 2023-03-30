@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "百発百中"
+        },
+        "description": {
+            "text": "リロードまでに700ダメージ(ボディ4回分orヘッド2回分)を与える"
+        },
+        "icon": {
+            "item": "minecraft:arrow"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/1kill"
+}

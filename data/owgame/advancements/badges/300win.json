@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "永遠への挑戦"
+        },
+        "description": {
+            "text": "累計300回勝利する(隠し実績！)"
+        },
+        "icon": {
+            "item": "minecraft:netherite_helmet"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/100win"
+}

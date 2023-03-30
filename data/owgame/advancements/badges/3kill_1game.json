@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "全部お見通し"
+        },
+        "description": {
+            "text": "バトルロワイアルで、1ゲーム中に3キルを達成する"
+        },
+        "icon": {
+            "item": "minecraft:compass"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/1kill"
+}

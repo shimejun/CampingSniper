@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "絶対に外さない"
+        },
+        "description": {
+            "text": "リロードまでに1100ダメージ(ヘッド3回分orボディ2回+ヘッド2回)を与える(隠し実績！)"
+        },
+        "icon": {
+            "item": "minecraft:spectral_arrow"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/precision"
+}

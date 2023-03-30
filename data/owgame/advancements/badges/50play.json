@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "一人前スナイパー"
+        },
+        "description": {
+            "text": "累計50ゲーム参加する"
+        },
+        "icon": {
+            "item": "minecraft:iron_hoe"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/10play"
+}

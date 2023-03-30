@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "射程こそ正義"
+        },
+        "description": {
+            "text": "100m以上遠くにいる敵に弾を命中させる"
+        },
+        "icon": {
+            "item": "minecraft:bow"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/1kill"
+}
