@@ -28,3 +28,4 @@ team leave @a
 scoreboard players set @a head_total_1game 0
 scoreboard players reset @a kill_limit
 scoreboard players reset @a id
+execute as @a[tag=op] run function owgame:operator/book

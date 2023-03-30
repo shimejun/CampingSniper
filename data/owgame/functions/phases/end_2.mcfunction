@@ -31,3 +31,4 @@ scoreboard players reset @a kill_limit
 scoreboard players set @a respawn_count 0
 gamemode adventure @a[gamemode=spectator]
 scoreboard players reset @a id
+execute as @a[tag=op] run function owgame:operator/book
