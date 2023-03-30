@@ -1,7 +1,8 @@
+#バトロワ終了
 title @a times 20 60 20
 execute if entity @e[tag=!team] run title @a subtitle [{"text":"Winner:","color":"gold","bold":true},{"selector":"@s","color":"aqua"}]
 
-title @a title [{"text":"-GAME OVER-","color":"red","bold":true,"italic":true}]
+title @a title [{"text":"GAME SET!","color":"gold","bold":true,"italic":true}]
 
 worldborder set 1800 0
 scoreboard objectives setdisplay list kill
