@@ -16,9 +16,9 @@ worldborder set 400 0
 execute as @e[tag=border_center] at @s run spreadplayers ~ ~ 120 140 false @a[gamemode=adventure]
 
 #エフェクトとか
-effect give @a invisibility 20 0 true
-effect give @a slowness 9 20 true
-effect give @a jump_boost 9 234 true
+effect give @a[gamemode=adventure] invisibility 20 0 true
+effect give @a[gamemode=adventure] slowness 9 20 true
+effect give @a[gamemode=adventure] jump_boost 9 234 true
 
 #全員をゲーム参加状態にする
 execute as @a[gamemode=adventure] at @s run function owgame:actions/join
@@ -40,4 +40,4 @@ time set night
 weather clear
 
 #soloチームに入れる
-team join solo @a
+team join solo @a[gamemode=adventure]

@@ -33,4 +33,6 @@ execute as @a[scores={health=..0}] at @s run function owgame:actions/death
 execute if score #gametype id matches 2 if entity @s[scores={kill_limit=10}] run tellraw @a [{"selector":"@s","color":"green"},{"text":"が残り10キル！","color":"gold"}]
 execute if score #gametype id matches 2 if entity @s[scores={kill_limit=5}] run tellraw @a [{"selector":"@s","color":"green"},{"text":"が残り5キル！","color":"gold"}]
 execute if score #gametype id matches 2 if entity @s[scores={kill_limit=1}] run tellraw @a [{"selector":"@s","color":"green"},{"text":"が残り1キル！","color":"gold"}]
+execute if score #gametype id matches 2 if entity @s[scores={kill_limit=1}] run title @s title [{"text":"残り1キル！","color":"gold"}]
+
 execute if score #gametype id matches 2 if entity @s[scores={kill_limit=0}] run function owgame:phases/end_2

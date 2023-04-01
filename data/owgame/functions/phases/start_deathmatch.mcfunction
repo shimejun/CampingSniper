@@ -18,5 +18,5 @@ kill @e[type=item]
 
 title @a title [{"text":"GAME START!","color":"aqua","bold":true,"italic":true}]
 execute as @a at @s run playsound minecraft:entity.generic.explode block @s ~ ~ ~ 1 1
-scoreboard players operation @a kill_limit = $dm_goal id
+scoreboard players operation @a[gamemode=adventure] kill_limit = $dm_goal id
 scoreboard objectives setdisplay sidebar kill_limit
