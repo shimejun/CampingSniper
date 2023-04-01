@@ -39,10 +39,10 @@ scoreboard players set @a[tag=damaged_head,tag=!shoot] damage 450
 
 #ダメージとログ
 execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 0 run scoreboard players add @s damage_total 180
-execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 1 run scoreboard players add @s damage_total 150
+execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 1 run scoreboard players add @s damage_total 120
 execute if entity @a[tag=damaged_head,scores={immunity=0}] run scoreboard players add @s damage_total 450
 execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 0 run scoreboard players add @s damage_total2 180
-execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 1 run scoreboard players add @s damage_total2 150
+execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 1 run scoreboard players add @s damage_total2 120
 execute if entity @a[tag=damaged_head,scores={immunity=0}] run scoreboard players add @s damage_total2 450
 execute if entity @a[tag=damaged_body,scores={immunity=0}] run tellraw @a [{"text":"❄ HIT!   ","color":"gold","bold":true},{"selector":"@s","color":"aqua"},{"text":" >>> ","color":"white"},{"selector":"@e[tag=damaged_body,tag=!shoot]","color":"red"},{"text":"  (","color":"yellow"},{"score":{"name":"@s","objective":"shoot_range"},"color":"yellow"},{"text":"m)","color":"yellow"}]
 execute if entity @a[tag=damaged_head,scores={immunity=0}] run tellraw @a [{"text":"☠ HEAD SHOT!   ","color":"dark_red","bold":true},{"selector":"@s","color":"aqua"},{"text":" >>> ","color":"white"},{"selector":"@e[tag=damaged_head,tag=!shoot]","color":"red"},{"text":"  (","color":"yellow"},{"score":{"name":"@s","objective":"shoot_range"},"color":"yellow"},{"text":"m)","color":"yellow"}]
