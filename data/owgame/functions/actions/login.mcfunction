@@ -1,6 +1,6 @@
 #ログインメッセージ
 scoreboard players set @s login 0
-tellraw @s [{"text":"     WELCOME BACK!     ","color":"light_purple","italic":true}]
+tellraw @s [{"text":"     WELCOME TO CAMPING SNIPER!     ","color":"light_purple","italic":true}]
 tellraw @s [{"text":"注意：本ゲームには","color":"gold"},{"text":"暴力的表現","color":"red"},{"text":"が含まれます。","color":"gold"}]
 tellraw @s [{"text":"気分を悪くされた場合はただちにゲームを中断し、休憩をとってください。","color":"gold"}]
 
