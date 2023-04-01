@@ -38,6 +38,9 @@ execute if score #punch id matches 0 run scoreboard players set @a[tag=damaged_b
 execute if score #punch id matches 1 run scoreboard players set @a[tag=damaged_body,tag=!shoot] damage 120
 scoreboard players set @a[tag=damaged_head,tag=!shoot] damage 450
 
+execute as @a[tag=damaged_body] at @s run playsound minecraft:entity.generic.explode block @s ~ ~ ~ 0.5 1
+execute as @a[tag=damaged_head] at @s run playsound minecraft:entity.generic.explode block @s ~ ~ ~ 0.5 1
+
 #ダメージとログ
 execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 0 run scoreboard players add @s damage_total 180
 execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 1 run scoreboard players add @s damage_total 120
