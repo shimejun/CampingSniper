@@ -5,6 +5,7 @@ scoreboard players set @s damage_total2 0
 scoreboard players set @s ammoes 0
 scoreboard players set @s health_max 300
 scoreboard players set @s reload_sr 0
+scoreboard players set @s sneak 0
 
 
 execute if entity @s[tag=!player] run summon minecraft:marker ~ ~1.1 ~ {Invulnerable:1b,Tags:["hit_body"]}
