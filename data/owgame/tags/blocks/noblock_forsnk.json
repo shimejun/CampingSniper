@@ -71,6 +71,7 @@
       "minecraft:soul_lantern",
       "minecraft:tinted_glass",
       "minecraft:campfire",
-      "minecraft:iron_bars"
+      "minecraft:iron_bars",
+      "#minecraft:walls"
     ]
   }
