@@ -23,10 +23,11 @@ execute as @a[nbt={SelectedItem:{id:"minecraft:iron_sword",tag:{knife:1b}},Activ
 function owgame:actions/ammoes
 function owgame:phases/area_damage
 execute as @a at @s run function owgame:items/item_using
+execute as @a at @s store result score @s looking run data get entity @s Rotation[1]
 
 #伏せ
-execute as @a[predicate=owgame:sneak,nbt={SelectedItem:{id:"minecraft:spyglass"},OnGround:1b}] at @s unless block ~ ~-1 ~ air unless block ~ ~1 ~ #minecraft:slabs if block ~ ~ ~ #owgame:noblock run function owgame:actions/down
-execute as @a[predicate=owgame:sneak,nbt={SelectedItem:{id:"minecraft:stick"},OnGround:1b}] at @s unless block ~ ~-1 ~ air unless block ~ ~1 ~ #minecraft:slabs if block ~ ~ ~ #owgame:noblock run function owgame:actions/down
+execute as @a[predicate=owgame:sneak,nbt={SelectedItem:{id:"minecraft:spyglass"},OnGround:1b}] at @s unless block ~ ~-1 ~ air unless block ~ ~1 ~ #minecraft:slabs if block ~ ~ ~ #owgame:noblock unless block ~ ~-1 ~ #minecraft:walls run function owgame:actions/down
+execute as @a[predicate=owgame:sneak,nbt={SelectedItem:{id:"minecraft:stick"},OnGround:1b}] at @s unless block ~ ~-1 ~ air unless block ~ ~1 ~ #minecraft:slabs if block ~ ~ ~ #owgame:noblock unless block ~ ~-1 ~ #minecraft:walls run function owgame:actions/down
 execute as @a[scores={sneak=10}] at @s run function owgame:actions/lay
 
 #空腹度の制御
@@ -37,11 +38,13 @@ effect give @a[scores={hunger=..19},tag=!playing] saturation 1 1 true
 #スナイパーライフル
 execute as @a[nbt={Inventory:[{id:"minecraft:spyglass",Slot:-106b,tag:{sr:1b}}]}] at @s run function owgame:weapons/kraber/trigger
 execute as @a[scores={shootcounts=10,ammo_sr=1..},nbt={SelectedItem:{id:"minecraft:stick",tag:{sr_r:1b}}}] at @s run playsound minecraft:block.iron_door.close block @s ~ ~ ~ 1 2
+execute as @a[scores={shootcounts=13}] at @s run effect clear @s levitation
 item replace entity @a[scores={shootcounts=0,ammo_sr=4},nbt={SelectedItem:{id:"minecraft:stick",tag:{sr_r:1b}}}] weapon.mainhand with spyglass{sr:1b,display:{Name:'[{"text":"スナイパーライフル ","color":"red"},{"text":"| ","color":"dark_gray"},{"text":"4/4","color":"gray"}]',Lore:['{"text":"Clip:4 Body:180 Head:450 Range:300m Reload:5s","color":"gray"}','{"text":"「火力(パワー)は全てを解決する！」","color":"gray","italic":true}','{"text":"圧倒的な攻撃力を誇るスナイパーライフル。"}','{"text":"右クリックでスコープを展開する。オフハンドに持ち替えることで射撃する。"}','{"text":"一定時間スニークすると伏せることもできる。伏せ状態はジャンプすると解除される。"}']},AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-0.3,Operation:1,Slot:"mainhand",UUID:[I;1486144296,-749059616,-1921787441,642927478]}]}
 item replace entity @a[scores={shootcounts=0,ammo_sr=3},nbt={SelectedItem:{id:"minecraft:stick",tag:{sr_r:1b}}}] weapon.mainhand with spyglass{sr:1b,display:{Name:'[{"text":"スナイパーライフル ","color":"red"},{"text":"| ","color":"dark_gray"},{"text":"3/4","color":"gray"}]',Lore:['{"text":"Clip:4 Body:180 Head:450 Range:300m Reload:5s","color":"gray"}','{"text":"「火力(パワー)は全てを解決する！」","color":"gray","italic":true}','{"text":"圧倒的な攻撃力を誇るスナイパーライフル。"}','{"text":"右クリックでスコープを展開する。オフハンドに持ち替えることで射撃する。"}','{"text":"一定時間スニークすると伏せることもできる。伏せ状態はジャンプすると解除される。"}']},AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-0.3,Operation:1,Slot:"mainhand",UUID:[I;1486144296,-749059616,-1921787441,642927478]}]}
 item replace entity @a[scores={shootcounts=0,ammo_sr=2},nbt={SelectedItem:{id:"minecraft:stick",tag:{sr_r:1b}}}] weapon.mainhand with spyglass{sr:1b,display:{Name:'[{"text":"スナイパーライフル ","color":"red"},{"text":"| ","color":"dark_gray"},{"text":"2/4","color":"gray"}]',Lore:['{"text":"Clip:4 Body:180 Head:450 Range:300m Reload:5s","color":"gray"}','{"text":"「火力(パワー)は全てを解決する！」","color":"gray","italic":true}','{"text":"圧倒的な攻撃力を誇るスナイパーライフル。"}','{"text":"右クリックでスコープを展開する。オフハンドに持ち替えることで射撃する。"}','{"text":"一定時間スニークすると伏せることもできる。伏せ状態はジャンプすると解除される。"}']},AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-0.3,Operation:1,Slot:"mainhand",UUID:[I;1486144296,-749059616,-1921787441,642927478]}]}
 item replace entity @a[scores={shootcounts=0,ammo_sr=1},nbt={SelectedItem:{id:"minecraft:stick",tag:{sr_r:1b}}}] weapon.mainhand with spyglass{sr:1b,display:{Name:'[{"text":"スナイパーライフル ","color":"red"},{"text":"| ","color":"dark_gray"},{"text":"1/4","color":"gray"}]',Lore:['{"text":"Clip:4 Body:180 Head:450 Range:300m Reload:5s","color":"gray"}','{"text":"「火力(パワー)は全てを解決する！」","color":"gray","italic":true}','{"text":"圧倒的な攻撃力を誇るスナイパーライフル。"}','{"text":"右クリックでスコープを展開する。オフハンドに持ち替えることで射撃する。"}','{"text":"一定時間スニークすると伏せることもできる。伏せ状態はジャンプすると解除される。"}']},AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-0.3,Operation:1,Slot:"mainhand",UUID:[I;1486144296,-749059616,-1921787441,642927478]}]}
-execute as @a[scores={shootcounts=1..,ammo_sr=1..},nbt={Inventory:[{id:"minecraft:stick",tag:{sr_r:1b},Slot:-106b}]}] at @s run function owgame:weapons/kraber/shoot_while_cd
+execute as @a[nbt={Inventory:[{id:"minecraft:stick",tag:{sr_r:1b,reloading:0b,},Slot:-106b}]}] at @s run function owgame:weapons/kraber/shoot_while_cd
+execute as @a[scores={shootcounts=1..,ammo_sr=1..},nbt={Inventory:[{id:"minecraft:spyglass",tag:{sr:1b},Slot:-106b}]}] at @s run function owgame:weapons/kraber/shoot_while_cd
 
 #体力の表示
 execute as @a[scores={health=300..,immunity=0},gamemode=!spectator] at @s run function owgame:healthbar/green
@@ -88,4 +91,4 @@ execute as @a[scores={respawn_count=1}] run function owgame:phases/dm_respawn
 execute if score #gametype id matches 2 run effect give @a saturation 1 0 true
 
 #拳モード
-execute if score #punch id matches 1 run effect give @a jump_boost 1 4 true
+execute if score #punch id matches 1 run effect give @a jump_boost 1 2 true
