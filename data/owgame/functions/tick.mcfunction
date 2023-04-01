@@ -50,7 +50,7 @@ execute as @a[scores={shootcounts=1..,ammo_sr=1..},nbt={Inventory:[{id:"minecraf
 execute as @a[scores={health=300..,immunity=0},gamemode=!spectator] at @s run function owgame:healthbar/green
 execute as @a[scores={health=201..299,immunity=0},gamemode=!spectator] at @s run function owgame:healthbar/yellow
 execute as @a[scores={health=..200,immunity=0},gamemode=!spectator] at @s run function owgame:healthbar/red
-execute as @a[scores={immunity=1},gamemode=!spectator] at @s run function owgame:healthbar/white
+execute as @a[scores={immunity=1..},gamemode=!spectator] at @s run function owgame:healthbar/white
 execute as @a[gamemode=spectator] at @s run function owgame:healthbar/spectator
 
 #武器リロード
@@ -89,6 +89,3 @@ execute as @a[scores={respawn_count=21}] run function owgame:count/1_dm
 execute as @a[scores={respawn_count=1}] run function owgame:phases/dm_respawn
 
 execute if score #gametype id matches 2 run effect give @a saturation 1 0 true
-
-#拳モード
-execute if score #punch id matches 1 run effect give @a jump_boost 1 2 true

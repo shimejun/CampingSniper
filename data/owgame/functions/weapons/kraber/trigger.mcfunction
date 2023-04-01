@@ -34,7 +34,8 @@ item replace entity @s[scores={ammo_sr=1}] weapon.mainhand with stick{sr_r:1b,re
 item replace entity @s[scores={ammo_sr=0}] weapon.mainhand with stick{sr_r:1b,reloading:0b,comsumable:1b,display:{Name:'[{"text":"スナイパーライフル","color":"red"},{"text":" | ","color":"dark_gray"},{"text":"0/4","color":"gray"}]',Lore:['{"text":"Clip:4 Body:180 Head:450 Range:300m Reload:5s","color":"gray"}','{"text":"「火力(パワー)は全てを解決する！」","color":"gray","italic":true}','{"text":"圧倒的な攻撃力を誇るスナイパーライフル。"}','{"text":"右クリックでスコープを展開する。オフハンドに持ち替えることで射撃する。"}','{"text":"一定時間スニークすると伏せることもできる。伏せ状態はジャンプすると解除される。"}']},AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-0.3,Operation:1,UUID:[I;1486144296,-749059616,-1921787441,642927478],Slot:"mainhand"}]}
 
 #的中者の処理
-scoreboard players set @a[tag=damaged_body,tag=!shoot] damage 180
+execute if score #punch id matches 0 run scoreboard players set @a[tag=damaged_body,tag=!shoot] damage 180
+execute if score #punch id matches 1 run scoreboard players set @a[tag=damaged_body,tag=!shoot] damage 120
 scoreboard players set @a[tag=damaged_head,tag=!shoot] damage 450
 
 #ダメージとログ

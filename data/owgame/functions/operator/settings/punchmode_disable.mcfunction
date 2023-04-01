@@ -1,2 +1,2 @@
-tellraw @a [{"text":"拳モードが無効化されました。","color":"green"}]
+tellraw @a [{"text":"アルティメット近接モードが無効化されました。","color":"green"}]
 scoreboard players set #punch id 0
