@@ -3,11 +3,18 @@
 tag @s add shoot
 
 #頭上のブロックがハーフ・階段ブロックでない場合はそのまま射出
-execute as @s[scores={ammo_sr=1..}] at @s unless block ~ ~1 ~ #minecraft:slabs unless block ~ ~1 ~ #minecraft:stairs run function owgame:weapons/kraber/shoot
-execute as @s[scores={ammo_sr=1..}] at @s unless block ~ ~ ~ #minecraft:slabs unless block ~ ~ ~ #minecraft:stairs run function owgame:weapons/kraber/shoot
+execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 0 unless block ~ ~1 ~ #minecraft:slabs unless block ~ ~1 ~ #minecraft:stairs run function owgame:weapons/kraber/shoot
+execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 0 unless block ~ ~ ~ #minecraft:slabs unless block ~ ~ ~ #minecraft:stairs run function owgame:weapons/kraber/shoot
 #頭上のブロックがハーフ・階段ブロックの場合は1ブロック先から射出
-execute as @s[scores={ammo_sr=1..}] at @s if block ~ ~1 ~ #minecraft:slabs run execute positioned ^ ^ ^1 run function owgame:weapons/kraber/shoot
-execute as @s[scores={ammo_sr=1..}] at @s if block ~ ~1 ~ #minecraft:stairs run execute positioned ^ ^ ^1 run function owgame:weapons/kraber/shoot
+execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 0 if block ~ ~1 ~ #minecraft:slabs run execute positioned ^ ^ ^1 run function owgame:weapons/kraber/shoot
+execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 0 if block ~ ~1 ~ #minecraft:stairs run execute positioned ^ ^ ^1 run function owgame:weapons/kraber/shoot
+
+#拳モード有効の場合は専用の射撃function実行
+execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 1 unless block ~ ~1 ~ #minecraft:slabs unless block ~ ~1 ~ #minecraft:stairs run function owgame:weapons/kraber/shoot_punchmode
+execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 1 unless block ~ ~ ~ #minecraft:slabs unless block ~ ~ ~ #minecraft:stairs run function owgame:weapons/kraber/shoot_punchmode
+
+execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 1 if block ~ ~1 ~ #minecraft:slabs run execute positioned ^ ^ ^1 run function owgame:weapons/kraber/shoot_punchmode
+execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 1 if block ~ ~1 ~ #minecraft:stairs run execute positioned ^ ^ ^1 run function owgame:weapons/kraber/shoot_punchmode
 
 #射撃時のあれこれ
 scoreboard players set @s shootcounts 20
@@ -30,9 +37,11 @@ scoreboard players set @a[tag=damaged_body,tag=!shoot] damage 180
 scoreboard players set @a[tag=damaged_head,tag=!shoot] damage 450
 
 #ダメージとログ
-execute if entity @a[tag=damaged_body,scores={immunity=0}] run scoreboard players add @s damage_total 180
+execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 0 run scoreboard players add @s damage_total 180
+execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 1 run scoreboard players add @s damage_total 150
 execute if entity @a[tag=damaged_head,scores={immunity=0}] run scoreboard players add @s damage_total 450
-execute if entity @a[tag=damaged_body,scores={immunity=0}] run scoreboard players add @s damage_total2 180
+execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 0 run scoreboard players add @s damage_total2 180
+execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 1 run scoreboard players add @s damage_total2 150
 execute if entity @a[tag=damaged_head,scores={immunity=0}] run scoreboard players add @s damage_total2 450
 execute if entity @a[tag=damaged_body,scores={immunity=0}] run tellraw @a [{"text":"❄ HIT!   ","color":"gold","bold":true},{"selector":"@s","color":"aqua"},{"text":" >>> ","color":"white"},{"selector":"@e[tag=damaged_body,tag=!shoot]","color":"red"},{"text":"  (","color":"yellow"},{"score":{"name":"@s","objective":"shoot_range"},"color":"yellow"},{"text":"m)","color":"yellow"}]
 execute if entity @a[tag=damaged_head,scores={immunity=0}] run tellraw @a [{"text":"☠ HEAD SHOT!   ","color":"dark_red","bold":true},{"selector":"@s","color":"aqua"},{"text":" >>> ","color":"white"},{"selector":"@e[tag=damaged_head,tag=!shoot]","color":"red"},{"text":"  (","color":"yellow"},{"score":{"name":"@s","objective":"shoot_range"},"color":"yellow"},{"text":"m)","color":"yellow"}]

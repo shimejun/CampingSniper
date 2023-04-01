@@ -86,3 +86,6 @@ execute as @a[scores={respawn_count=21}] run function owgame:count/1_dm
 execute as @a[scores={respawn_count=1}] run function owgame:phases/dm_respawn
 
 execute if score #gametype id matches 2 run effect give @a saturation 1 0 true
+
+#拳モード
+execute if score #punch id matches 1 run effect give @a jump_boost 1 4 true

@@ -49,3 +49,5 @@ team modify solo nametagVisibility hideForOwnTeam
 gamerule fallDamage false
 gamerule doMobSpawning false
 gamerule doDaylightCycle true
+
+execute unless score #punch id matches 1 run scoreboard players set #punch id 0
