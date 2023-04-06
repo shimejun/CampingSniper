@@ -1,4 +1,4 @@
-
+#ゲーム参加コマンド
 scoreboard players set @s health 300
 scoreboard players set @s damage_total 0
 scoreboard players set @s damage_total2 0

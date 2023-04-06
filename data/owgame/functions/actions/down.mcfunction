@@ -1,4 +1,4 @@
-#床に寝そべる
+#伏せる
 execute if entity @s[scores={sneak=..9},tag=!downed] if block ~ ~ ~ #owgame:noblock_forsnk run scoreboard players add @s[scores={sneak=..9}] sneak 1
 execute if entity @s[scores={sneak=..9},tag=!downed] unless block ~ ~ ~ #owgame:noblock_forsnk run scoreboard players add @s sneak 0
 
