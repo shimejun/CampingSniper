@@ -26,7 +26,7 @@ execute if block ~ ~1.5 ~ #owgame:noblock anchored eyes positioned ^ ^ ^1 if blo
 execute if block ~ ~1.5 ~ #owgame:noblock anchored eyes positioned ^ ^ ^1 if block ~ ~ ~ #minecraft:wooden_doors run playsound minecraft:block.wood.break block @a ~ ~ ~ 5 0.5
 execute if block ~ ~1.5 ~ #owgame:noblock anchored eyes positioned ^ ^ ^1 if block ~ ~ ~ #minecraft:wooden_doors run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air replace #minecraft:wooden_doors
 execute if block ~ ~1.5 ~ #owgame:noblock anchored eyes positioned ^ ^ ^1 if block ~ ~ ~ minecraft:campfire run playsound minecraft:block.wood.break block @a ~ ~ ~ 5 0.5
-execute if block ~ ~1.5 ~ #owgame:noblock anchored eyes positioned ^ ^ ^1 if block ~ ~ ~ minecraft:campfire run kill @e[type=marker,distance=..2,tag=camp]
+execute if block ~ ~1.5 ~ #owgame:noblock anchored eyes positioned ^ ^ ^1 if block ~ ~ ~ minecraft:campfire run kill @e[type=marker,distance=..2,tag=campfire]
 execute if block ~ ~1.5 ~ #owgame:noblock anchored eyes positioned ^ ^ ^1 if block ~ ~ ~ minecraft:campfire run advancement grant @s only owgame:badges/break_camp
 execute if block ~ ~1.5 ~ #owgame:noblock anchored eyes positioned ^ ^ ^1 if block ~ ~ ~ minecraft:campfire run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air replace minecraft:campfire
 
