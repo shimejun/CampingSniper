@@ -6,7 +6,7 @@ tellraw @a [{"selector":"@s","color":"aqua","bold":true},{"text":"さんが初�
 tellraw @s [{"text":" "}]
 
 tellraw @s [{"text":"WELCOME TO CAMPING SNIPER!","color":"light_purple","italic":true,"bold":true}]
-tellraw @s [{"text":"注意：本ゲームには","color":"gold"},{"text":"暴力的・流血表現および残酷な描写","color":"red"},{"text":"が含まれます。","color":"gold"}]
+tellraw @s [{"text":"注意：本ゲームには","color":"gold"},{"text":"暴力的表現","color":"red"},{"text":"が含まれます。","color":"gold"}]
 tellraw @s [{"text":"気分を悪くされた場合はただちにゲームを中断し、休憩をとってください。","color":"gold"}]
 
 tellraw @s [{"text":"銃声や各種SEが大きい/小さい場合は、サウンド設定からブロックの音量で調整してください。","color":"yellow"}]
