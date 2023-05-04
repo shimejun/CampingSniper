@@ -24,7 +24,8 @@ execute if entity @a[scores={playercount=6}] run worldborder set 800 0
 execute if entity @a[scores={playercount=7..}] run worldborder set 900 0
 
 #ボーダーの中心からプレイヤー分散
-execute as @e[tag=border_center] at @s run spreadplayers ~ ~ 100 120 false @a[gamemode=adventure]
+execute if score #teammode id matches 0 as @e[tag=border_center] at @s run spreadplayers ~ ~ 100 120 false @a[gamemode=adventure]
+execute if score #teammode id matches 1 as @e[tag=border_center] at @s run spreadplayers ~ ~ 100 120 true @a[gamemode=adventure]
 
 #エフェクトとか無敵時間とか
 effect give @a invisibility 20 0 true
@@ -57,4 +58,12 @@ time set night
 weather clear
 
 #チーム戦でなければsoloチームに入れる
-execute if entity @e[tag=!team] run team join solo @a
+execute if score #teammode id matches 0 run team join solo @a
+
+#チーム戦ならばチーム生存判定スコアを追加
+execute if score #teammode id matches 1 if entity @a[team=red] run scoreboard players set #redteam id 1
+execute if score #teammode id matches 1 if entity @a[team=blue] run scoreboard players set #blueteam id 1
+execute if score #teammode id matches 1 if entity @a[team=yellow] run scoreboard players set #yellowteam id 1
+execute if score #teammode id matches 1 if entity @a[team=green] run scoreboard players set #greenteam id 1
+execute if score #teammode id matches 1 if entity @a[team=purple] run scoreboard players set #purpleteam id 1
+execute if score #teammode id matches 1 if entity @a[team=orange] run scoreboard players set #orangeteam id 1

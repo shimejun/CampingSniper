@@ -31,6 +31,13 @@ scoreboard objectives add reload_crossbow minecraft.dropped:minecraft.crossbow
 scoreboard objectives add reload_spyglass minecraft.dropped:minecraft.spyglass
 scoreboard objectives add ammo_sr dummy
 scoreboard objectives add reload_sr dummy
+#チーム戦関連
+scoreboard objectives add d_red minecraft.dropped:minecraft.red_stained_glass
+scoreboard objectives add d_blue minecraft.dropped:minecraft.blue_stained_glass
+scoreboard objectives add d_yellow minecraft.dropped:minecraft.yellow_stained_glass
+scoreboard objectives add d_green minecraft.dropped:minecraft.green_stained_glass
+scoreboard objectives add d_purple minecraft.dropped:minecraft.purple_stained_glass
+scoreboard objectives add d_orange minecraft.dropped:minecraft.orange_stained_glass
 #その他
 scoreboard objectives add syringe_time dummy
 scoreboard objectives add camp_timeleft dummy
@@ -46,6 +53,25 @@ scoreboard objectives add looking dummy
 #チーム
 team add solo
 team modify solo nametagVisibility hideForOwnTeam
+
+team add red
+team modify red color red
+team modify red nametagVisibility hideForOtherTeams
+team add blue
+team modify blue color blue
+team modify blue nametagVisibility hideForOtherTeams
+team add yellow
+team modify yellow color yellow
+team modify yellow nametagVisibility hideForOtherTeams
+team add green
+team modify green color green
+team modify green nametagVisibility hideForOtherTeams
+team add purple
+team modify purple color dark_purple
+team modify purple nametagVisibility hideForOtherTeams
+team add orange
+team modify orange color gold
+team modify orange nametagVisibility hideForOtherTeams
 #ゲームルール
 gamerule fallDamage false
 gamerule doMobSpawning false
