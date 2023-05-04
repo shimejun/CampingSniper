@@ -36,7 +36,9 @@ item replace entity @s[scores={ammo_sr=0}] weapon.mainhand with stick{sr_r:1b,re
 #的中者の処理
 execute if score #punch id matches 0 run scoreboard players set @a[tag=damaged_body,tag=!shoot] damage 180
 execute if score #punch id matches 1 run scoreboard players set @a[tag=damaged_body,tag=!shoot] damage 120
-scoreboard players set @a[tag=damaged_head,tag=!shoot] damage 450
+scoreboard players set @a[tag=damaged_head,tag=!shoot,nbt=!{Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] damage 450
+scoreboard players set @a[tag=damaged_head,tag=!shoot,nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] damage 225
+item replace entity @a[tag=damaged_head] armor.head with air
 
 execute as @a[tag=damaged_body] at @s run playsound minecraft:entity.generic.explode block @s ~ ~ ~ 0.5 1
 execute as @a[tag=damaged_head] at @s run playsound minecraft:entity.generic.explode block @s ~ ~ ~ 0.5 1
