@@ -7,6 +7,8 @@ execute if score #gametype id matches 1 run clear @s spyglass
 execute if score #gametype id matches 1 run clear @s written_book
 #残骸収納チェストトロッコ召喚
 execute if score #gametype id matches 1 run summon chest_minecart ~ ~ ~ {Tags:["deadbody"],CustomName:'[{"text":"残骸"}]'}
+execute if score #gametype id matches 1 if entity @s[nbt={Inventory:[{id:"minecraft:leather_helmet",Slot:103b}]}] run loot spawn ~ ~ ~ loot owgame:helmet
+
 #インベントリをチェストトロッコに代入
 execute if score #gametype id matches 1 run data modify entity @e[sort=nearest,limit=1,type=chest_minecart] Items set from entity @s Inventory
 loot spawn ~ ~ ~ loot owgame:head
