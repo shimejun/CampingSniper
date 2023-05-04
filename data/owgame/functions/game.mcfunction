@@ -16,8 +16,11 @@ execute as @e[tag=border_center] at @e[tag=world_center,limit=1] run spreadplaye
 execute as @e[tag=border_center] at @s run worldborder center ~ ~
 execute as @e[tag=border_center] at @s run setworldspawn ~ ~ ~
 #補給物資の投下位置を設定
-execute as @e[tag=world_center] at @s unless entity @e[tag=package] run summon marker ~ ~ ~ {Tags:["package"]}
-execute as @e[tag=package] at @e[tag=world_center,limit=1] run spreadplayers ~ ~ 0 60 false @s
+execute as @e[tag=world_center] at @s run summon marker ~ ~ ~ {Tags:["package"]}
+execute as @e[tag=world_center] at @s if entity @a[scores={playercount=6..}] run summon marker ~ ~ ~ {Tags:["package"]}
+execute as @e[tag=world_center] at @s if entity @a[scores={playercount=10..}] run summon marker ~ ~ ~ {Tags:["package"]}
+execute as @e[tag=world_center] at @s if entity @a[scores={playercount=15..}] run summon marker ~ ~ ~ {Tags:["package"]}
+execute at @e[tag=world_center,limit=1] run spreadplayers ~ ~ 60 100 false @e[tag=package]
 
 #プレイヤー人数に応じてボーダー初期範囲を変更
 execute if entity @a[scores={playercount=2}] run worldborder set 400 0
