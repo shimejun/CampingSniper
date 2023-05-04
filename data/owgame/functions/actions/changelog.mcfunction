@@ -6,6 +6,7 @@ tellraw @s [{"text":"・弾道のサウンドが意図したものよりも大�
 
 tellraw @s [{"text":"----変更・追加----","color":"gold"}]
 tellraw @s [{"text":"・ナイフの攻撃力を強化しました。(40→60)","color":"yellow"}]
+tellraw @s [{"text":"・弾が残っている状態でリロードを開始したとき、残弾数に応じてリロード時間を短縮するようになりました。","color":"yellow"}]
 tellraw @s [{"text":"・チーム戦モードを追加しました！","color":"green"}]
 
 #雑多なあれこれ
