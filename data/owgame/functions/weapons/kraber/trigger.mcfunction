@@ -38,7 +38,6 @@ execute if score #punch id matches 0 run scoreboard players set @a[tag=damaged_b
 execute if score #punch id matches 1 run scoreboard players set @a[tag=damaged_body,tag=!shoot] damage 120
 scoreboard players set @a[tag=damaged_head,tag=!shoot,nbt=!{Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] damage 450
 scoreboard players set @a[tag=damaged_head,tag=!shoot,nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] damage 225
-item replace entity @a[tag=damaged_head] armor.head with air
 
 execute as @a[tag=damaged_body] at @s run playsound minecraft:entity.generic.explode block @s ~ ~ ~ 0.5 1
 execute as @a[tag=damaged_head] at @s run playsound minecraft:entity.generic.explode block @s ~ ~ ~ 0.5 1
@@ -46,12 +45,16 @@ execute as @a[tag=damaged_head] at @s run playsound minecraft:entity.generic.exp
 #ダメージとログ
 execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 0 run scoreboard players add @s damage_total 180
 execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 1 run scoreboard players add @s damage_total 120
-execute if entity @a[tag=damaged_head,scores={immunity=0}] run scoreboard players add @s damage_total 450
+execute if entity @a[tag=damaged_head,scores={immunity=0},nbt=!{Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] run scoreboard players add @s damage_total 450
+execute if entity @a[tag=damaged_head,scores={immunity=0},nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] run scoreboard players add @s damage_total 225
 execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 0 run scoreboard players add @s damage_total2 180
 execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #punch id matches 1 run scoreboard players add @s damage_total2 120
-execute if entity @a[tag=damaged_head,scores={immunity=0}] run scoreboard players add @s damage_total2 450
+execute if entity @a[tag=damaged_head,scores={immunity=0},nbt=!{Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] run scoreboard players add @s damage_total2 450
+execute if entity @a[tag=damaged_head,scores={immunity=0},nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] run scoreboard players add @s damage_total2 225
 execute if entity @a[tag=damaged_body,scores={immunity=0}] run tellraw @a [{"text":"❄ HIT!   ","color":"gold","bold":true},{"selector":"@s","color":"aqua"},{"text":" >>> ","color":"white"},{"selector":"@e[tag=damaged_body,tag=!shoot]","color":"red"},{"text":"  (","color":"yellow"},{"score":{"name":"@s","objective":"shoot_range"},"color":"yellow"},{"text":"m)","color":"yellow"}]
 execute if entity @a[tag=damaged_head,scores={immunity=0}] run tellraw @a [{"text":"☠ HEAD SHOT!   ","color":"dark_red","bold":true},{"selector":"@s","color":"aqua"},{"text":" >>> ","color":"white"},{"selector":"@e[tag=damaged_head,tag=!shoot]","color":"red"},{"text":"  (","color":"yellow"},{"score":{"name":"@s","objective":"shoot_range"},"color":"yellow"},{"text":"m)","color":"yellow"}]
+
+item replace entity @a[tag=damaged_head] armor.head with air
 
 #当たった相手が無敵の場合
 execute if entity @a[tag=damaged_body,scores={immunity=1..}] run tellraw @a [{"text":"❄ HIT!   ","color":"gold","bold":true},{"selector":"@s","color":"aqua"},{"text":" >✘> ","color":"dark_gray"},{"selector":"@e[tag=damaged_body]","color":"red"},{"text":"  (","color":"yellow"},{"score":{"name":"@s","objective":"shoot_range"},"color":"yellow"},{"text":"m)","color":"yellow"}]
