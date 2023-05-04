@@ -5,7 +5,7 @@ execute as @a at @s run function owgame:weapons/knife/get
 
 give @a red_dye{bantage:1b,comsumable:1b,display:{Name:'[{"text":"包帯","color":"aqua"}]',Lore:['{"text":"効果:+100❤ 所要時間:5秒","color":"gray"}','{"text":"「応急手当の強い味方」","color":"gray","italic":true}','{"text":"体力を回復する間に合わせの包帯。"}','{"text":"スニーク長押し、または伏せた状態で持ち使用する。"}']}} 4
 give @a crossbow{display:{Name:'{"text":"スモークランチャー","color":"aqua"}',Lore:['{"text":"「燻製料理にもってこい」","color":"gray","italic":true}','{"text":"着弾点でスモークを発生させる。使い捨て。"}']},HideFlags:37,Unbreakable:0b,Damage:464,Enchantments:[{id:"minecraft:piercing",lvl:1s},{id:"minecraft:quick_charge",lvl:2s}],ChargedProjectiles:[{id:"minecraft:arrow",Count:1b}],Charged:1b} 2
-give @a bread{display:{Name:'{"text":"パン","color":"aqua"}',Lore:['{"text":"効果:+2.5🍖","color":"gray"}','{"text":"「これ以上に美味しい非常食を知らない」","color":"gray","italic":true}','{"text":"職人が丹精込めて作ったパン。貴重な食料なので大切に食べよう。"}']}} 5
+give @a bread 4
 
 give @a compass{display:{Name:'{"text":"エリアコンパス","color":"aqua"}',Lore:['{"text":"「気まぐれ」","color":"gray","italic":true}','{"text":"安全地帯の中心を示すコンパス。"}']}} 1
 

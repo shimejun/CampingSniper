@@ -3,6 +3,7 @@
 tag @a remove player
 scoreboard players set #gametype id 1
 schedule function owgame:count/5 4s
+schedule function owgame:phases/cp_spawn 125s
 scoreboard players reset @a changelog
 scoreboard players reset @a playercount
 
@@ -11,9 +12,12 @@ execute as @a[gamemode=adventure] at @s run scoreboard players add @a playercoun
 
 #spreadplayersを使ってワールドボーダーの中心を設定
 execute as @e[tag=border_center] at @s unless entity @e[tag=world_center] run summon marker ~ ~ ~ {Tags:["world_center"]}
-execute as @e[tag=border_center] at @e[tag=world_center,limit=1] run spreadplayers ~ ~ 0 100 false @s
+execute as @e[tag=border_center] at @e[tag=world_center,limit=1] run spreadplayers ~ ~ 0 150 false @s
 execute as @e[tag=border_center] at @s run worldborder center ~ ~
 execute as @e[tag=border_center] at @s run setworldspawn ~ ~ ~
+#補給物資の投下位置を設定
+execute as @e[tag=world_center] at @s unless entity @e[tag=package] run summon marker ~ ~ ~ {Tags:["package"]}
+execute as @e[tag=package] at @e[tag=world_center,limit=1] run spreadplayers ~ ~ 0 60 false @s
 
 #プレイヤー人数に応じてボーダー初期範囲を変更
 execute if entity @a[scores={playercount=2}] run worldborder set 400 0

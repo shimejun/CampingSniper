@@ -1,0 +1,95 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [ 
+            {
+            "type": "item",
+            "weight": 1,
+            "name": "minecraft:red_dye",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": 2
+              },
+              {
+                "function": "set_nbt",
+                "tag": "{display:{Name:'{\"text\":\"包帯\",\"color\":\"aqua\"}',Lore:['{\"text\":\"効果:+100❤ 所要時間:5秒\",\"color\":\"gray\"}','{\"text\":\"「応急手当の強い味方」\",\"color\":\"gray\"}','{\"text\":\"体力を回復する間に合わせの包帯。\"}','{\"text\":\"スニーク長押し、または伏せた状態で持ち使用する。\"}']},bantage:1b,comsumable:1b}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "rolls": 3,
+        "entries": [
+          {
+            "type": "item",
+            "weight": 1,
+            "name": "minecraft:bread",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "item",
+            "weight": 1,
+            "name": "minecraft:leather_helmet",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": 1
+              },
+              {
+                "function": "set_nbt",
+                "tag": "{display:{Name:'{\"text\":\"ヘルメット\",\"color\":\"aqua\"}',Lore:['{\"text\":\"「安全は二の次、大事なのは勝利」\",\"color\":\"gray\"}','{\"text\":\"装備している場合、ヘッドショットダメージを50%軽減する。\"}','{\"text\":\"使い捨て。\"}'],color:216832},HideFlags:6,Unbreakable:1b,AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:0,Operation:0,UUID:[I;53249817,-701805870,-1962231080,-1403577841],Slot:\"head\"}]}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "rolls": 2,
+        "entries": [
+          {
+            "type": "item",
+            "weight": 2,
+            "name": "minecraft:crossbow",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": 1
+              },
+              {
+                "function": "set_nbt",
+                "tag": "{display:{Name:'{\"text\":\"スモークランチャー\",\"color\":\"aqua\"}',Lore:['{\"text\":\"「燻製料理にもってこい」\",\"color\":\"gray\"}','{\"text\":\"着弾点でスモークを発生させる。使い捨て。\"}']},HideFlags:33,Damage:464,Enchantments:[{id:\"minecraft:piercing\",lvl:1s},{id:\"minecraft:quick_charge\",lvl:2s}],ChargedProjectiles:[{id:\"minecraft:arrow\",Count:1b},{},{}],Charged:1b}"
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "weight": 1,
+            "name": "minecraft:potion",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": 1
+              },
+              {
+                "function": "set_nbt",
+                "tag": "{display:{Name:'{\"text\":\"鎮痛剤\",\"color\":\"aqua\"}',Lore:['{\"text\":\"効果：❤自然回復(最大+240❤)\",\"color\":\"gray\"}','{\"text\":\"「痛いのは気のせい」\",\"color\":\"gray\"}','{\"text\":\"飲むと体力を少しずつ回復する市販の鎮痛剤。\"}']},comsumable:1b,CustomPotionEffects:[{Id:10,Amplifier:0b,Duration:600}],CustomPotionColor:16187647}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

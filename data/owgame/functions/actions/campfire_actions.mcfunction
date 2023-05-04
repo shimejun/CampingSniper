@@ -18,5 +18,15 @@ scoreboard players remove @a[scores={immunity=1..}] immunity 1
 #ゲーム開始時の空腹はコレ
 effect give @a[scores={immunity=29,hunger=19..}] hunger 4 100
 effect clear @a[scores={immunity=1..,hunger=..17}] hunger
+
+#再生エフェクトで体力自然回復
+execute as @a[nbt={ActiveEffects:[{Id:10}]},scores={health=297..299}] at @s run scoreboard players set @s health 300
+execute as @a[nbt={ActiveEffects:[{Id:10}]},scores={health=..296}] at @s run scoreboard players add @s health 4
+
+#補給物資
+execute as @e[tag=supply] at @s run particle minecraft:end_rod ~ ~-10 ~ 0 40 0 0 80 force @a[distance=10..200]
+execute as @e[tag=supply] at @s if data entity @s {Items:[]} run kill @s
+execute as @e[tag=supply] at @s if block ~ ~-1 ~ air run data merge entity @s {Motion:[0.0,-0.1,0.0]}
+
 #0.5秒毎に実行
 schedule function owgame:actions/campfire_actions 10t

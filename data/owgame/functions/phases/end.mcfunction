@@ -33,6 +33,7 @@ gamemode adventure @a
 schedule clear owgame:phases/showdown
 schedule clear owgame:phases/endgame
 schedule clear owgame:phases/endgame2
+schedule clear owgame:phases/cp_spawn
 team leave @a
 kill @e[type=pig]
 scoreboard players set @a head_total_1game 0

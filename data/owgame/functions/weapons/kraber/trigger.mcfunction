@@ -56,6 +56,7 @@ execute if entity @a[tag=damaged_head,scores={immunity=0}] if score #teammode id
 execute if entity @a[tag=damaged_body,scores={immunity=0}] if score #teammode id matches 1 run tellraw @a [{"text":"❄ HIT!   ","color":"gold","bold":true},{"selector":"@s","color":"reset"},{"text":" >>> ","color":"white"},{"selector":"@e[tag=damaged_body,tag=!shoot]"},{"text":"  (","color":"yellow"},{"score":{"name":"@s","objective":"shoot_range"},"color":"yellow"},{"text":"m)","color":"yellow"}]
 execute if entity @a[tag=damaged_head,scores={immunity=0}] if score #teammode id matches 1 run tellraw @a [{"text":"☠ HEAD SHOT!   ","color":"dark_red","bold":true},{"selector":"@s","color":"reset"},{"text":" >>> ","color":"white"},{"selector":"@e[tag=damaged_head,tag=!shoot]"},{"text":"  (","color":"yellow"},{"score":{"name":"@s","objective":"shoot_range"},"color":"yellow"},{"text":"m)","color":"yellow"}]
 
+execute as @a[tag=damaged_head,nbt={Inventory:[{id:"minecraft:leather_helmet",Slot:103b}]}] at @s run playsound minecraft:entity.item.break block @s ~ ~ ~ 2 1 1
 item replace entity @a[tag=damaged_head] armor.head with air
 
 #当たった相手が無敵の場合
