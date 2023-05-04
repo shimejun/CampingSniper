@@ -11,7 +11,9 @@ tellraw @a [{"selector":"@s","color":"yellow"},{"text":"さんがサーバーに
 execute as @a[tag=!playing] at @s run playsound minecraft:entity.player.levelup block @s ~ ~ ~ 1 1
 
 scoreboard players enable @s changelog
-tellraw @s [{"text":"ゲームのバージョン：ver 0.2.1  ","color":"yellow"},{"text":"[クリックして前回の変更を閲覧]","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger changelog"}}]
+tellraw @s [{"text":"ゲームのバージョン：ver 0.3.0-Alpha  ","color":"yellow"},{"text":"[クリックして前回の変更を閲覧]","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger changelog"}}]
+tellraw @s [{"text":"[注意] このバージョンは","color":"yellow"},{"text":"アルファ版","color":"red"},{"text":"であるため、","color":"yellow"},{"text":"意図しない挙動や致命的なバグ","color":"red"},{"text":"が発生する恐れがあります。","color":"yellow"}]
+tellraw @s [{"text":"予めご了承ください。by作者","color":"yellow"}]
 
 
 execute if entity @a[scores={playercount=2..}] unless entity @s[tag=playing] run gamemode spectator
