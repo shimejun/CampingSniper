@@ -23,6 +23,23 @@ execute if entity @s[scores={syringe_time=1..},nbt=!{SelectedItem:{id:"minecraft
 
 execute if entity @s[scores={syringe_time=100},nbt={SelectedItem:{id:"minecraft:red_dye",tag:{bantage:1b}}}] run function owgame:items/bantage_use
 
+
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:paper",tag:{revive:1b}}},predicate=owgame:sneak] run scoreboard players add @s revive_time 1
+execute if score #teammode id matches 1 if entity @s[scores={revive_time=1},nbt={SelectedItem:{id:"minecraft:paper",tag:{revive:1b}}}] run playsound minecraft:item.armor.equip_leather block @a ~ ~ ~ 3 1
+execute if score #teammode id matches 1 if entity @s[scores={revive_time=1},nbt={SelectedItem:{id:"minecraft:paper",tag:{revive:1b}}}] run tellraw @s [{"text":"復活チケットを使用中… (発光しています！)","color":"aqua"}]
+execute if entity @s[scores={revive_time=1..},nbt={SelectedItem:{id:"minecraft:paper",tag:{revive:1b}}}] run effect give @s glowing 1 0 true
+
+execute if entity @s[scores={revive_time=1},nbt={SelectedItem:{id:"minecraft:paper",tag:{revive:1b}}}] run scoreboard players set @s revive_time 2
+execute if entity @s[scores={revive_time=1..},nbt=!{SelectedItem:{id:"minecraft:paper",tag:{revive:1b}}}] run scoreboard players set @s revive_time 0
+execute if entity @s[scores={revive_time=1..110},nbt={SelectedItem:{id:"minecraft:paper",tag:{revive:1b}}},predicate=owgame:sneak] run experience add @s 1 points
+execute if entity @s[scores={revive_time=1..},nbt={SelectedItem:{id:"minecraft:paper",tag:{revive:1b}}},predicate=owgame:sneak] run experience add @s 3 points
+execute if entity @s[scores={revive_time=1..,sneak=10},nbt={SelectedItem:{id:"minecraft:paper",tag:{revive:1b}}}] run experience add @s 3 points
+
+execute if entity @s[scores={revive_time=1..},nbt=!{SelectedItem:{id:"minecraft:paper",tag:{revive:1b}}}] run experience set @s 0 points
+
+execute if entity @s[scores={revive_time=300},nbt={SelectedItem:{id:"minecraft:paper",tag:{revive:1b}}}] run function owgame:items/revive_use
+
+
 execute unless block ~ ~ ~ campfire run scoreboard players add @s[predicate=owgame:sneak,nbt={SelectedItem:{id:"minecraft:campfire"},OnGround:1b}] camp_time 1
 execute if entity @s[scores={camp_time=1},nbt={SelectedItem:{id:"minecraft:campfire"}}] run tellraw @s [{"text":"焚き火を設置中…","color":"aqua"}]
 execute if entity @s[scores={camp_time=1},nbt={SelectedItem:{id:"minecraft:campfire"}}] run scoreboard players set @s camp_time 2

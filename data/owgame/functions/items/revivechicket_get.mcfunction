@@ -1,0 +1,1 @@
+give @s paper{revive:1b,comsumable:1b,display:{Name:'[{"text":"復活チケット","color":"aqua"}]',Lore:['{"text":"所要時間:15秒","color":"gray"}','{"text":"「応急手当の強い味方」","color":"gray","italic":true}','{"text":"味方を復活できる、霊魂が描かれた奇妙なカード。"}','{"text":"大規模チームの場合、ランダムで一名が復活する。"}','{"text":"スニーク長押し、または伏せた状態で持ち使用する。"}']}}

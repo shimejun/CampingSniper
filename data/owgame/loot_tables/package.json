@@ -21,6 +21,27 @@
         ]
       },
       {
+        "rolls": 1,
+        "entries": [ 
+            {
+            "type": "item",
+            "weight": 1,
+            "name": "minecraft:paper",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": 1
+              },
+              {
+                "function": "set_nbt",
+                "tag": "{display:{Name:'{\"text\":\"復活チケット\",\"color\":\"aqua\"}',Lore:['{\"text\":\"所要時間:15秒\",\"color\":\"gray\"}','{\"text\":\"「死者蘇生♰」\",\"color\":\"gray\"}','{\"text\":\"味方を復活できる、霊魂が描かれた奇妙なカード。\"}','{\"text\":\"複数名倒されている場合、ランダムで一名が復活する。\"}','{\"text\":\"スニーク長押し、または伏せた状態で持ち使用する。\"}']},revive:1b,comsumable:1b}"
+              }
+            ]
+          }
+        ]
+      },
+
+      {
         "rolls": 3,
         "entries": [
           {
@@ -85,7 +106,7 @@
               },
               {
                 "function": "set_nbt",
-                "tag": "{display:{Name:'{\"text\":\"鎮痛剤\",\"color\":\"aqua\"}',Lore:['{\"text\":\"効果：❤自然回復(最大+240❤)\",\"color\":\"gray\"}','{\"text\":\"「痛いのは気のせい」\",\"color\":\"gray\"}','{\"text\":\"飲むと体力を少しずつ回復する市販の鎮痛剤。\"}']},comsumable:1b,CustomPotionEffects:[{Id:10,Amplifier:0b,Duration:600}],CustomPotionColor:16187647}"
+                "tag": "{display:{Name:'{\"text\":\"鎮痛剤\",\"color\":\"aqua\"}',Lore:['{\"text\":\"効果：❤自然回復(最大+240❤)\",\"color\":\"gray\"}','{\"text\":\"「痛いのは気のせい」\",\"color\":\"gray\"}','{\"text\":\"飲むと体力を少しずつ回復する市販の鎮痛剤。\"}']},CustomPotionEffects:[{Id:10,Amplifier:0b,Duration:600}],CustomPotionColor:16187647}"
               }
             ]
           }

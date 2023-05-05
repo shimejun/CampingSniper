@@ -20,6 +20,7 @@ scoreboard objectives add login minecraft.custom:minecraft.leave_game
 scoreboard objectives add playercount dummy
 scoreboard objectives add first_login dummy
 scoreboard objectives add camp_time dummy
+scoreboard objectives add revive_time dummy
 #デスマッチ用
 scoreboard objectives add respawn_count dummy
 scoreboard objectives add kill_limit dummy [{"text":"残りキル数"}]
