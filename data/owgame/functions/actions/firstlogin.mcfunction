@@ -11,9 +11,7 @@ tellraw @s [{"text":"気分を悪くされた場合はただちにゲームを�
 
 tellraw @s [{"text":"銃声や各種SEが大きい/小さい場合は、サウンド設定からブロックの音量で調整してください。","color":"yellow"}]
 tellraw @s [{"text":" "}]
-tellraw @s [{"text":"ゲームのバージョン：ver 0.3.0-Alpha","color":"yellow"}]
-tellraw @s [{"text":"[注意] このバージョンは","color":"yellow"},{"text":"アルファ版","color":"red"},{"text":"であるため、","color":"yellow"},{"text":"意図しない挙動や致命的なバグ","color":"red"},{"text":"が発生する恐れがあります。","color":"yellow"}]
-tellraw @s [{"text":"予めご了承ください。by作者","color":"yellow"}]
+tellraw @s [{"text":"ゲームのバージョン：ver 0.3.0","color":"yellow"}]
 execute as @a[tag=!playing] at @s run playsound minecraft:entity.player.levelup block @s ~ ~ ~ 1 1
 
 scoreboard players set @s health 300

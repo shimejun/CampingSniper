@@ -1,6 +1,6 @@
 
 #変更履歴
-tellraw @s [{"text":"<前回の変更 v0.2.1→ v0.3.0-Alpha>","color":"green"}]
+tellraw @s [{"text":"<前回の変更 v0.2.1→ v0.3.0>","color":"green"}]
 tellraw @s [{"text":"----修正----","color":"gold"}]
 tellraw @s [{"text":"・弾道のサウンドが意図したものよりも大きく聞こえる問題を修正しました。","color":"red"}]
 
