@@ -9,3 +9,4 @@ function owgame:items/smokeluncher_get
 execute if score #gametype id matches 1 run tag @s add player
 execute if score #gametype id matches 1 run scoreboard players add @a playercount 1
 scoreboard players set @s health 300
+gamemode adventure @s

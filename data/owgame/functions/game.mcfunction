@@ -17,9 +17,9 @@ execute as @e[tag=border_center] at @s run worldborder center ~ ~
 execute as @e[tag=border_center] at @s run setworldspawn ~ ~ ~
 #補給物資の投下位置を設定
 execute as @e[tag=world_center] at @s run summon marker ~ ~ ~ {Tags:["package"]}
-execute as @e[tag=world_center] at @s if entity @a[scores={playercount=6..}] run summon marker ~ ~ ~ {Tags:["package"]}
-execute as @e[tag=world_center] at @s if entity @a[scores={playercount=10..}] run summon marker ~ ~ ~ {Tags:["package"]}
-execute as @e[tag=world_center] at @s if entity @a[scores={playercount=15..}] run summon marker ~ ~ ~ {Tags:["package"]}
+execute as @e[tag=world_center] at @s if entity @a[scores={playercount=4..}] run summon marker ~ ~ ~ {Tags:["package"]}
+execute as @e[tag=world_center] at @s if entity @a[scores={playercount=8..}] run summon marker ~ ~ ~ {Tags:["package"]}
+execute as @e[tag=world_center] at @s if entity @a[scores={playercount=12..}] run summon marker ~ ~ ~ {Tags:["package"]}
 execute at @e[tag=world_center,limit=1] run spreadplayers ~ ~ 60 100 false @e[tag=package]
 
 #プレイヤー人数に応じてボーダー初期範囲を変更
@@ -31,8 +31,7 @@ execute if entity @a[scores={playercount=6}] run worldborder set 800 0
 execute if entity @a[scores={playercount=7..}] run worldborder set 900 0
 
 #ボーダーの中心からプレイヤー分散
-execute if score #teammode id matches 0 as @e[tag=border_center] at @s run spreadplayers ~ ~ 100 120 false @a[gamemode=adventure]
-execute if score #teammode id matches 1 as @e[tag=border_center] at @s run spreadplayers ~ ~ 100 120 true @a[gamemode=adventure]
+execute as @e[tag=border_center] at @s run spreadplayers ~ ~ 100 120 false @a[gamemode=adventure]
 
 #エフェクトとか無敵時間とか
 effect give @a invisibility 20 0 true
@@ -74,3 +73,10 @@ execute if score #teammode id matches 1 if entity @a[team=yellow] run scoreboard
 execute if score #teammode id matches 1 if entity @a[team=green] run scoreboard players set #greenteam id 1
 execute if score #teammode id matches 1 if entity @a[team=purple] run scoreboard players set #purpleteam id 1
 execute if score #teammode id matches 1 if entity @a[team=orange] run scoreboard players set #orangeteam id 1
+
+execute if score #teammode id matches 1 unless entity @a[team=red] run scoreboard players set #redteam id 0
+execute if score #teammode id matches 1 unless entity @a[team=blue] run scoreboard players set #blueteam id 0
+execute if score #teammode id matches 1 unless entity @a[team=yellow] run scoreboard players set #yellowteam id 0
+execute if score #teammode id matches 1 unless entity @a[team=green] run scoreboard players set #greenteam id 0
+execute if score #teammode id matches 1 unless entity @a[team=purple] run scoreboard players set #purpleteam id 0
+execute if score #teammode id matches 1 unless entity @a[team=orange] run scoreboard players set #orangeteam id 0

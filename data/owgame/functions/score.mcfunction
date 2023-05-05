@@ -28,7 +28,6 @@ scoreboard objectives add kill_limit dummy [{"text":"残りキル数"}]
 scoreboard objectives add ammoes dummy
 scoreboard objectives add ammoes_max dummy
 scoreboard objectives add reload_stick minecraft.dropped:minecraft.stick
-scoreboard objectives add reload_crossbow minecraft.dropped:minecraft.crossbow
 scoreboard objectives add reload_spyglass minecraft.dropped:minecraft.spyglass
 scoreboard objectives add ammo_sr dummy
 scoreboard objectives add reload_sr dummy

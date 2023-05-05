@@ -15,7 +15,7 @@ advancement grant @a[scores={win_total=5..}] only owgame:badges/5win
 advancement grant @a[scores={win_total=10..}] only owgame:badges/10win
 advancement grant @a[scores={win_total=100..}] only owgame:badges/100win
 advancement grant @a[scores={win_total=300..}] only owgame:badges/300win
-advancement grant @a[scores={kill=0}] only owgame:badges/win_withoutkill
+advancement grant @a[scores={kill=0},gamemode=adventure] only owgame:badges/win_withoutkill
 execute if score #teamtype id matches 2 run advancement grant @a[team=orange] only owgame:badges/team_duowin
 execute if score #teamtype id matches 3 run advancement grant @a[team=orange] only owgame:badges/team_triowin
 execute if score #teamtype id matches 4 run advancement grant @a[team=orange] only owgame:badges/team_quintwin
@@ -26,6 +26,9 @@ execute as @a[team=orange,gamemode=adventure] at @s unless entity @a[team=orange
 execute as @a at @s run function owgame:actions/leave
 kill @e[tag=hit_body]
 kill @e[tag=hit_head]
+kill @e[tag=package]
+
+
 tag @a remove playing
 execute as @a at @s run playsound minecraft:ui.toast.challenge_complete block @s ~ ~ ~ 1 1
 kill @e[type=chest_minecart]
