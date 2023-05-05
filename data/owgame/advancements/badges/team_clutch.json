@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "希望はいつか光と成る"
+        },
+        "description": {
+            "text": "チーム戦モードで、チームメイトが全滅している状態で勝利する"
+        },
+        "icon": {
+            "item": "minecraft:nether_star"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/1win"
+}

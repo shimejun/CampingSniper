@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "起きろー！"
+        },
+        "description": {
+            "text": "チーム戦モードで、復活チケットを使う"
+        },
+        "icon": {
+            "item": "minecraft:paper"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/camp"
+}

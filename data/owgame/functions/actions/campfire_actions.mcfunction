@@ -24,7 +24,7 @@ execute as @a[nbt={ActiveEffects:[{Id:10}]},scores={health=297..299}] at @s run 
 execute as @a[nbt={ActiveEffects:[{Id:10}]},scores={health=..296}] at @s run scoreboard players add @s health 4
 
 #補給物資
-execute if entity @e[tag=supply] at @e[tag=package] run particle minecraft:end_rod ~ ~ ~ 0 40 0 0 80 force @a[distance=10..200]
+execute if entity @e[tag=supply] at @e[tag=package,sort=nearest,limit=1] run particle minecraft:end_rod ~ ~ ~ 0 40 0 0 80 force @a[distance=10..200]
 execute as @e[tag=supply] at @s if data entity @s {Items:[]} run kill @s
 execute as @e[tag=supply] at @s if block ~ ~-1 ~ air run data merge entity @s {Motion:[0.0,-0.1,0.0]}
 

@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "頭を下げればぶつかりません"
+        },
+        "description": {
+            "text": "ヘルメットでヘッドショットダメージを軽減する"
+        },
+        "icon": {
+            "item": "minecraft:leather_helmet"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/head"
+}

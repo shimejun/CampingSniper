@@ -16,6 +16,12 @@ advancement grant @a[scores={win_total=10..}] only owgame:badges/10win
 advancement grant @a[scores={win_total=100..}] only owgame:badges/100win
 advancement grant @a[scores={win_total=300..}] only owgame:badges/300win
 advancement grant @a[scores={kill=0}] only owgame:badges/win_withoutkill
+execute if score #teamtype id matches 2 run advancement grant @a[team=yellow] only owgame:badges/team_duowin
+execute if score #teamtype id matches 3 run advancement grant @a[team=yellow] only owgame:badges/team_triowin
+execute if score #teamtype id matches 4 run advancement grant @a[team=yellow] only owgame:badges/team_quintwin
+execute if score #teamtype id matches 6 run advancement grant @a[team=yellow] only owgame:badges/team_hexawin
+execute unless entity @a[team=yellow,gamemode=spectator] run advancement grant @s only owgame:badges/team_win
+execute as @a[team=yellow,gamemode=adventure] at @s unless entity @a[team=yellow,gamemode=adventure,distance=1..] run advancement grant @s only owgame:badges/team_clutch
 
 execute as @a at @s run function owgame:actions/leave
 kill @e[tag=hit_body]

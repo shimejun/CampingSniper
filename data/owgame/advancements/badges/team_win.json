@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "一緒に帰る場所"
+        },
+        "description": {
+            "text": "チーム戦モードで、チームが全員生存している状態で勝利する"
+        },
+        "icon": {
+            "item": "minecraft:dirt_path"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/1win"
+}

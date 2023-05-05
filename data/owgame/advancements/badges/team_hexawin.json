@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "チームワークと実力と"
+        },
+        "description": {
+            "text": "六人チーム戦モードで勝利する"
+        },
+        "icon": {
+            "item": "minecraft:lead"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/team_quintwin"
+}
