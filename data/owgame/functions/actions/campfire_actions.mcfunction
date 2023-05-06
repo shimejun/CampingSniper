@@ -16,7 +16,7 @@ execute as @e[tag=campfire,tag=!lit_campfire] at @s run particle minecraft:small
 #無敵時間の減少
 scoreboard players remove @a[scores={immunity=1..}] immunity 1
 #ゲーム開始時の空腹はコレ
-effect give @a[scores={immunity=29,hunger=19..}] hunger 4 100
+effect give @a[scores={immunity=59,hunger=19..}] hunger 4 100
 effect clear @a[scores={immunity=1..,hunger=..17}] hunger
 
 #再生エフェクトで体力自然回復
@@ -24,7 +24,7 @@ execute as @a[nbt={ActiveEffects:[{Id:10}]},scores={health=297..299}] at @s run 
 execute as @a[nbt={ActiveEffects:[{Id:10}]},scores={health=..296}] at @s run scoreboard players add @s health 4
 
 #補給物資
-execute at @e[tag=supply,sort=nearest,limit=1] run particle minecraft:end_rod ~ ~ ~ 0 40 0 0 80 force @a[distance=10..400]
+execute at @e[tag=supply] run particle minecraft:end_rod ~ ~ ~ 0 40 0 0 80 force @a
 execute as @e[tag=supply] at @s if data entity @s {Items:[]} run kill @s
 execute as @e[tag=supply] at @s if block ~ ~-1 ~ air run data merge entity @s {Motion:[0.0,-0.1,0.0]}
 
