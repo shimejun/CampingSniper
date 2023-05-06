@@ -1,6 +1,6 @@
 #黄色チーム勝利
 title @a times 20 60 20
-execute if entity @e[tag=!team] run title @a subtitle [{"text":"Winner:","color":"gold","bold":true},{"text":"YELLOW TEAM","color":"red"}]
+execute if entity @e[tag=!team] run title @a subtitle [{"text":"Winner:","color":"gold","bold":true},{"text":"YELLOW TEAM","color":"yellow"}]
 title @a title [{"text":"GAME SET!","color":"gold","bold":true,"italic":true}]
 
 worldborder set 1800 0
