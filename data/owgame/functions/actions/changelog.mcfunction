@@ -3,6 +3,7 @@
 tellraw @s [{"text":"<前回の変更 v0.2.1→ v0.3.0>","color":"green"}]
 tellraw @s [{"text":"----修正----","color":"gold"}]
 tellraw @s [{"text":"・弾道のサウンドが意図したものよりも大きく聞こえる問題を修正しました。","color":"red"}]
+tellraw @s [{"text":"・プレイヤーの死体をスモークランチャーで破壊できる問題を修正しました。","color":"red"}]
 
 tellraw @s [{"text":"----変更・追加----","color":"gold"}]
 tellraw @s [{"text":"・ナイフの攻撃力を強化しました。(40→60)","color":"yellow"}]
