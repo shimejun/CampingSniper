@@ -72,6 +72,11 @@
       "minecraft:tinted_glass",
       "minecraft:campfire",
       "minecraft:iron_bars",
-      "#minecraft:slabs"
+      "#minecraft:slabs",
+      "minecraft:powder_snow",
+      "minecraft:cave_vines",
+      "minecraft:cave_vines_plant",
+      "minecraft:glass",
+      "minecraft:glass_pane"
     ]
   }
