@@ -18,6 +18,8 @@ scoreboard players set @s health 300
 scoreboard players set @s damage_total 0
 scoreboard players set @s damage_total2 0
 scoreboard players set @s ammoes 0
+scoreboard players set @s ammo_sr 0
+scoreboard players set @s immunity 1
 scoreboard players set @s sneak 0
 scoreboard players set @s health_max 300
 
