@@ -4,7 +4,7 @@ execute as @a at @s if score @s id = @e[tag=hit_body,sort=nearest,limit=1] id ru
 execute as @e[tag=hit_body] at @s unless score @p id = @s id run tp @s @r[gamemode=!spectator]
 execute as @e[tag=hit_head] at @s unless score @p id = @s id run tp @s @r[gamemode=!spectator]
 
-execute as @a[predicate=!owgame:sneak,scores={sneak=..9}] at @s if score @s id = @e[tag=hit_head,sort=nearest,limit=1] id run tp @e[sort=nearest,limit=1,tag=hit_head] ~ ~1.8 ~
+execute as @a[predicate=!owgame:sneak,scores={sneak=..9}] at @s if score @s id = @e[tag=hit_head,sort=nearest,limit=1] id run tp @e[sort=nearest,limit=1,tag=hit_head] ~ ~1.7 ~
 execute as @a[predicate=owgame:sneak,scores={sneak=..9}] at @s if score @s id = @e[tag=hit_head,sort=nearest,limit=1] id run tp @e[sort=nearest,limit=1,tag=hit_head] ~ ~1.5 ~
 execute as @a[predicate=!owgame:sneak,scores={sneak=..9}] at @s unless score @s id = @e[tag=hit_head,sort=nearest,limit=1] id run tp @e[sort=nearest,limit=1,tag=hit_head] @a[sort=random,distance=1..,limit=1,gamemode=!spectator]
 execute as @a[predicate=owgame:sneak,scores={sneak=..9}] at @s unless score @s id = @e[tag=hit_head,sort=nearest,limit=1] id run tp @e[sort=nearest,limit=1,tag=hit_head] @a[sort=random,distance=1..,limit=1,gamemode=!spectator]
