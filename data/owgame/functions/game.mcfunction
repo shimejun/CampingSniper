@@ -16,11 +16,10 @@ execute as @e[tag=border_center] at @e[tag=world_center,limit=1] run spreadplaye
 execute as @e[tag=border_center] at @s run worldborder center ~ ~
 execute as @e[tag=border_center] at @s run setworldspawn ~ ~ ~
 #補給物資の投下位置を設定
+kill @e[tag=package]
 execute as @e[tag=world_center] at @s run summon marker ~ ~ ~ {Tags:["package"]}
-execute as @e[tag=world_center] at @s if entity @a[scores={playercount=4..}] run summon marker ~ ~ ~ {Tags:["package"]}
-execute as @e[tag=world_center] at @s if entity @a[scores={playercount=8..}] run summon marker ~ ~ ~ {Tags:["package"]}
-execute as @e[tag=world_center] at @s if entity @a[scores={playercount=12..}] run summon marker ~ ~ ~ {Tags:["package"]}
-execute at @e[tag=world_center,limit=1] run spreadplayers ~ ~ 60 100 false @e[tag=package]
+execute as @e[tag=world_center] at @s run summon marker ~ ~ ~ {Tags:["package"]}
+execute at @e[tag=world_center,limit=1] run spreadplayers ~ ~ 100 80 false @e[tag=package]
 
 #プレイヤー人数に応じてボーダー初期範囲を変更
 execute if entity @a[scores={playercount=2}] run worldborder set 400 0
@@ -31,7 +30,7 @@ execute if entity @a[scores={playercount=6}] run worldborder set 800 0
 execute if entity @a[scores={playercount=7..}] run worldborder set 900 0
 
 #ボーダーの中心からプレイヤー分散(ソロモード)
-execute if score #teammode id matches 0 as @e[tag=border_center] at @s run spreadplayers ~ ~ 100 120 false @a[gamemode=adventure]
+execute if score #teammode id matches 0 as @e[tag=border_center] at @s run spreadplayers ~ ~ 100 100 false @a[gamemode=adventure]
 
 #エフェクトとか無敵時間とか
 effect give @a invisibility 30 0 true
@@ -85,7 +84,7 @@ execute if score #teammode id matches 1 if entity @a[team=green] unless entity @
 execute if score #teammode id matches 1 if entity @a[team=purple] unless entity @e[tag=purple_spawn] at @r run summon marker ~ ~ ~ {Tags:["purple_spawn","spawnpoint"]}
 execute if score #teammode id matches 1 if entity @a[team=orange] unless entity @e[tag=orange_spawn] at @r run summon marker ~ ~ ~ {Tags:["orange_spawn","spawnpoint"]}
 
-execute as @e[tag=border_center] at @s run spreadplayers ~ ~ 100 120 false @e[tag=spawnpoint]
+execute as @e[tag=border_center] at @s run spreadplayers ~ ~ 100 300 false @e[tag=spawnpoint]
 #チーム戦の場合、各チームをポイントに分散
 execute if score #teammode id matches 1 as @e[tag=red_spawn] at @s run spreadplayers ~ ~ 1 1 false @a[team=red]
 execute if score #teammode id matches 1 as @e[tag=blue_spawn] at @s run spreadplayers ~ ~ 1 1 false @a[team=blue]
