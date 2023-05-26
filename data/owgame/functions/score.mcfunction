@@ -10,6 +10,7 @@ scoreboard objectives add damage_total2 dummy
 scoreboard objectives add damage dummy
 scoreboard objectives add armor armor
 scoreboard objectives add sneak dummy
+scoreboard objectives add swim minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add id dummy
 scoreboard objectives add kill dummy
 scoreboard objectives add resistance minecraft.custom:minecraft.damage_resisted
