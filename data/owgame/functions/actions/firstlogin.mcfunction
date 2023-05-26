@@ -11,7 +11,7 @@ tellraw @s [{"text":"気分を悪くされた場合はただちにゲームを�
 
 tellraw @s [{"text":"銃声や各種SEが大きい/小さい場合は、サウンド設定からブロックの音量で調整してください。","color":"yellow"}]
 tellraw @s [{"text":" "}]
-tellraw @s [{"text":"ゲームのバージョン：ver 0.3.0","color":"yellow"}]
+tellraw @s [{"text":"ゲームのバージョン：ver 0.3.1","color":"yellow"}]
 execute as @a[tag=!playing] at @s run playsound minecraft:entity.player.levelup block @s ~ ~ ~ 1 1
 
 scoreboard players set @s health 300
@@ -22,6 +22,7 @@ scoreboard players set @s ammo_sr 0
 scoreboard players set @s immunity 1
 scoreboard players set @s sneak 0
 scoreboard players set @s health_max 300
+effect give @s resistance infinite 4 true
 
 execute unless entity @s[tag=playing] if entity @a[scores={playercount=2..}] run gamemode spectator
 execute unless entity @s[tag=playing] if entity @a[scores={playercount=2..}] run tellraw @s [{"text":"ゲームが進行中の為、一時的に観戦モードになります…","color":"gray"}]

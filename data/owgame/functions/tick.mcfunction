@@ -13,7 +13,6 @@ execute as @a[scores={sneak=10}] at @s if score @s id = @e[tag=hit_body,sort=nea
 execute as @a[scores={sneak=10}] at @s if score @s id = @e[tag=hit_head,sort=nearest,limit=1] id positioned ~ ~0.65 ~ run tp @e[sort=nearest,limit=1,tag=hit_head] ^ ^ ^0.35
 execute as @a[scores={sneak=10}] at @s unless score @s id = @e[tag=hit_body,sort=nearest,limit=1] id run tp @e[sort=nearest,limit=1,tag=hit_body] @a[sort=random,distance=1..,limit=1]
 execute as @a[scores={sneak=10}] at @s unless score @s id = @e[tag=hit_head,sort=nearest,limit=1] id positioned ~ ~0.65 ~ run tp @e[sort=nearest,limit=1,tag=hit_head] @a[sort=random,distance=1..,limit=1]
-effect give @a resistance 10 4 true
 
 #ナイフ
 effect give @a[nbt=!{SelectedItem:{id:"minecraft:iron_sword",tag:{knife:1b}}}] weakness 3 5 true
