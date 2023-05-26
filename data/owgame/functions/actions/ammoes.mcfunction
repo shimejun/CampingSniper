@@ -1,4 +1,3 @@
-#> owgame:tick
 #全プレイヤーが常時実行
 #弾数表示
 execute as @a[scores={reload_sr=80}] at @s run scoreboard players set @s ammoes 1
