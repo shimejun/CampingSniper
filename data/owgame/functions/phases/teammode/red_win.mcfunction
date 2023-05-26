@@ -21,7 +21,8 @@ execute if score #teamtype id matches 3 run advancement grant @a[team=red] only 
 execute if score #teamtype id matches 4 run advancement grant @a[team=red] only owgame:badges/team_quintwin
 execute if score #teamtype id matches 6 run advancement grant @a[team=red] only owgame:badges/team_hexawin
 execute unless entity @a[team=red,gamemode=spectator] run advancement grant @s only owgame:badges/team_win
-execute as @a[team=red,gamemode=adventure] at @s unless entity @a[team=red,gamemode=adventure,distance=1..] run advancement grant @s only owgame:badges/team_clutch
+execute as @a[team=red,gamemode=adventure] at @s unless entity @a[team=red,gamemode=adventure,distance=0.1..] run advancement grant @s only owgame:badges/team_clutch
+execute as @a[team=red,gamemode=adventure] at @s unless entity @a[team=red,distance=0.1..] run advancement grant @s only owgame:badges/team_solowin
 
 execute as @a at @s run function owgame:actions/leave
 kill @e[tag=hit_body]
