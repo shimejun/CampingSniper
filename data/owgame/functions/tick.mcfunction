@@ -28,6 +28,7 @@ execute as @a at @s store result score @s looking run data get entity @s Rotatio
 execute as @a[predicate=owgame:sneak,nbt={SelectedItem:{id:"minecraft:spyglass"},OnGround:1b}] at @s unless block ~ ~-1 ~ air unless block ~ ~1 ~ #minecraft:slabs if block ~ ~ ~ #owgame:noblock unless block ~ ~-1 ~ #minecraft:walls run function owgame:actions/down
 execute as @a[predicate=owgame:sneak,nbt={SelectedItem:{id:"minecraft:stick"},OnGround:1b}] at @s unless block ~ ~-1 ~ air unless block ~ ~1 ~ #minecraft:slabs if block ~ ~ ~ #owgame:noblock unless block ~ ~-1 ~ #minecraft:walls run function owgame:actions/down
 execute as @a[scores={sneak=10}] at @s run function owgame:actions/lay
+execute as @a[scores={swim=1..}] at @s run function owgame:actions/swim
 
 #空腹度の制御
 execute as @a[scores={hunger=19..20}] at @s run effect give @s speed 1 0 true

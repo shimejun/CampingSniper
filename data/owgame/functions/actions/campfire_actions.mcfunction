@@ -28,5 +28,9 @@ execute at @e[tag=supply] run particle minecraft:end_rod ~ ~ ~ 0 40 0 0 80 force
 execute as @e[tag=supply] at @s if data entity @s {Items:[]} run kill @s
 execute as @e[tag=supply] at @s if block ~ ~-1 ~ air run data merge entity @s {Motion:[0.0,-0.1,0.0]}
 
+#水中ペナルティダメージ
+execute as @a at @s if block ~ ~1 ~ water run scoreboard players add @s damage 4
+execute as @a at @s if block ~ ~1 ~ water run function owgame:health
+
 #0.5秒毎に実行
 schedule function owgame:actions/campfire_actions 10t
