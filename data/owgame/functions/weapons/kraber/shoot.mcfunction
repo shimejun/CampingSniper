@@ -14,6 +14,8 @@ execute if score @s sneak matches 10.. if block ~ ~0.5 ~ #owgame:noblock unless 
 execute if block ~ ~1.5 ~ #owgame:noblock anchored eyes positioned ^ ^ ^1 run particle minecraft:cloud ~ ~ ~ 0 0 0 0 1 force @a[distance=2..]
 execute if score @s sneak matches ..9 unless block ~ ~1.5 ~ #owgame:noblock anchored eyes positioned ^ ^ ^1 run playsound minecraft:entity.generic.explode block @a[distance=..50] ~ ~ ~ 1 1 0.3
 execute if score @s sneak matches 10.. unless block ~ ~0.5 ~ #owgame:noblock anchored eyes positioned ^ ^ ^1 run playsound minecraft:entity.generic.explode block @a[distance=..50] ~ ~ ~ 1 1 0.3
+execute if score @s sneak matches ..9 unless block ~ ~1.5 ~ #owgame:noblock anchored eyes positioned ^ ^ ^1 run particle block stone ^ ^ ^-1 0.4 0.4 0.4 0 60 force @a[distance=..100]
+execute if score @s sneak matches 10.. unless block ~ ~0.5 ~ #owgame:noblock anchored eyes positioned ^ ^ ^1 run particle block stone ^ ^ ^-1 0.4 0.4 0.4 0 60 force @a[distance=..100]
 
 execute if block ~ ~1.5 ~ #owgame:noblock anchored eyes positioned ^ ^ ^1 as @a[distance=..12,tag=!shoot] at @s run playsound minecraft:entity.iron_golem.attack block @s ~ ~ ~ 0.1 2 1
 execute if block ~ ~0.5 ~ #owgame:noblock anchored eyes positioned ^ ^ ^1 as @a[distance=..12,tag=!shoot] at @s run playsound minecraft:entity.iron_golem.attack block @s ~ ~ ~ 0.1 2 1
