@@ -21,6 +21,8 @@ execute if score #punch id matches 0 run scoreboard players set @s shootcounts 2
 execute if score #punch id matches 1 run scoreboard players set @s shootcounts 15
 scoreboard players remove @s[scores={ammo_sr=1..}] ammo_sr 1
 playsound minecraft:entity.firework_rocket.large_blast block @a[distance=..150] ~ ~ ~ 4 1 0.1
+execute as @s positioned ~ ~1.7 ~ run particle minecraft:smoke ^ ^ ^1.2 0.1 0.1 0.1 0 7 force @a[distance=..10]
+execute as @s positioned ~ ~1.4 ~ run particle minecraft:flash ^ ^ ^1 0 0 0 0 1 force @a
 
 attribute @s generic.movement_speed base set 0.06
 
