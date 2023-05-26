@@ -1,10 +1,10 @@
 {
     "display": {
         "title": {
-            "text": "生きる安全地帯"
+            "text": "最後の戦い"
         },
         "description": {
-            "text": "ボーダーの最終収縮まで生き残る(隠し実績！)"
+            "text": "安全地帯の最終収縮まで生き残る"
         },
         "icon": {
             "item": "minecraft:barrier"
@@ -12,7 +12,7 @@
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
-        "hidden": true
+        "hidden": false
     },
     "criteria": {
         "pex": {
