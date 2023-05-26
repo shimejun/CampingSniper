@@ -50,7 +50,7 @@
               },
               {
                 "function": "set_nbt",
-                "tag": "{display:{Name:'{\"text\":\"ヘルメット\",\"color\":\"aqua\"}',Lore:['{\"text\":\"「安全は二の次、大事なのは勝利」\",\"color\":\"gray\"}','{\"text\":\"装備している場合、ヘッドショットダメージを50%軽減する。\"}','{\"text\":\"使い捨て。\"}'],color:216832},HideFlags:6,Unbreakable:1b,AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:0,Operation:0,UUID:[I;53249817,-701805870,-1962231080,-1403577841],Slot:\"head\"}]}"
+                "tag": "{display:{Name:'{\"text\":\"ヘルメット\",\"color\":\"aqua\"}',Lore:['{\"text\":\"「安全は二の次、大事なのは勝利」\",\"color\":\"gray\"}','{\"text\":\"装備している場合、ヘッドショットダメージを50%軽減する。\"}','{\"text\":\"使い捨て。\"}'],color:216832},HideFlags:6,Unbreakable:1b,AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:0,Operation:0,UUID:[I;53249817,-701805870,-1962231080,-1403577841],Slot:\"head\"}],Unbreakble:1b}"
               }
             ]
           }
