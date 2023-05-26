@@ -14,10 +14,10 @@ execute if score #gametype id matches 2 run give @s red_dye{bantage:1b,comsumabl
 tellraw @s [{"selector":"@a[scores={health=..0}]","color":"red"},{"text":"を倒した！","color":"aqua"}]
 
 #実績
-advancement grant @s[scores={kill=3..}] only owgame:badges/3kill_1game
-advancement grant @s[scores={kill=5..}] only owgame:badges/5kill_1game
-advancement grant @s[scores={kill=10..}] only owgame:badges/10kill_1game
-advancement grant @s[scores={kill=20..}] only owgame:badges/20kill_1game
+execute if score #gametype id matches 2 run advancement grant @s[scores={kill=3..}] only owgame:badges/3kill_1game
+execute if score #gametype id matches 2 run advancement grant @s[scores={kill=5..}] only owgame:badges/5kill_1game
+execute if score #gametype id matches 2 run advancement grant @s[scores={kill=10..}] only owgame:badges/10kill_1game
+execute if score #gametype id matches 2 run advancement grant @s[scores={kill=20..}] only owgame:badges/20kill_1game
 
 advancement grant @s[scores={kill_total=1..}] only owgame:badges/1kill
 advancement grant @s[scores={kill_total=10..}] only owgame:badges/10kill
