@@ -30,3 +30,4 @@ team join orange @r[team=]
 team join orange @r[team=]
 team join orange @r[team=]
 scoreboard players set #teamtype id 4
+scoreboard players set #teammode id 1
