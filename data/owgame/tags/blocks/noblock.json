@@ -77,6 +77,7 @@
       "minecraft:cave_vines",
       "minecraft:cave_vines_plant",
       "minecraft:glass",
-      "minecraft:glass_pane"
+      "minecraft:glass_pane",
+      "#minecraft:stairs"
     ]
   }
