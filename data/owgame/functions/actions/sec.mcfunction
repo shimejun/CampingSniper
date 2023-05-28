@@ -33,4 +33,4 @@ execute as @a at @s if block ~ ~1 ~ water run scoreboard players add @s damage 4
 execute as @a at @s if block ~ ~1 ~ water run function owgame:health
 
 #0.5秒毎に実行
-schedule function owgame:actions/campfire_actions 10t
+schedule function owgame:actions/sec 10t

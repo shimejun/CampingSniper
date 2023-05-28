@@ -30,7 +30,7 @@ kill @e[tag=package]
 execute as @e[tag=campfire] at @s run setblock ~ ~ ~ air replace
 execute as @e[tag=campfire] at @s run kill @s
 
-schedule clear owgame:actions/campfire_actions
+schedule clear owgame:actions/sec
 gamemode adventure @a
 schedule clear owgame:phases/showdown
 schedule clear owgame:phases/endgame

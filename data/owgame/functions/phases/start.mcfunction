@@ -23,7 +23,7 @@ kill @e[type=chest_minecart]
 kill @e[type=item]
 
 
-schedule function owgame:actions/campfire_actions 10t
+schedule function owgame:actions/sec 10t
 schedule function owgame:phases/showdown 420s
 
 title @a title [{"text":"GAME START!","color":"aqua","bold":true,"italic":true}]
