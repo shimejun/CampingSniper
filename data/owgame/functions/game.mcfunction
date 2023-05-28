@@ -59,8 +59,10 @@ advancement grant @a[scores={play_total=2000}] only owgame:badges/2000play
 tellraw @a [{"text":"ゲームを開始します！","color":"green"}]
 
 #見た目の部分
-time set night
 weather clear
+execute as @r at @s if predicate owgame:randomchance run weather rain
+time set day
+execute as @r at @s unless predicate owgame:randomchance run time set night
 
 #チーム戦ならばチーム生存判定スコアを追加
 execute if score #teammode id matches 1 if entity @a[team=red] run scoreboard players set #redteam id 1
