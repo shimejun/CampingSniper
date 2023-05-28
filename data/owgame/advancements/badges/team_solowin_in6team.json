@@ -1,0 +1,23 @@
+{
+    "display": {
+        "title": {
+            "text": "止められるものはいない"
+        },
+        "description": {
+            "text": "6人チーム戦モードで、自分以外がチームにいないゲームで勝利する(隠し実績！)"
+        },
+        "icon": {
+            "item": "minecraft:enchanted_golden_apple"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "pex": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent":"owgame:badges/team_solowin"
+}

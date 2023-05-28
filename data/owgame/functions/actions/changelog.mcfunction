@@ -15,6 +15,7 @@ tellraw @s [{"text":"・一部進捗の達成条件を変更しました。","co
 tellraw @s [{"text":"----追加----","color":"gold"}]
 tellraw @s [{"text":"・射撃時にフラッシュが発生するようになりました。","color":"green"}]
 tellraw @s [{"text":"・変更履歴のレイアウトを一部変更しました。","color":"green"}]
+tellraw @s [{"text":"・一部実績を追加しました。","color":"green"}]
 
 #雑多なあれこれ
 scoreboard players reset @s changelog

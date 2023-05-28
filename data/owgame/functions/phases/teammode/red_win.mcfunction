@@ -23,6 +23,7 @@ execute if score #teamtype id matches 6 run advancement grant @a[team=red] only 
 execute unless entity @a[team=red,gamemode=spectator] run advancement grant @s only owgame:badges/team_win
 execute as @a[team=red,gamemode=adventure] at @s unless entity @a[team=red,gamemode=adventure,distance=0.1..] run advancement grant @s only owgame:badges/team_clutch
 execute as @a[team=red,gamemode=adventure] at @s unless entity @a[team=red,distance=0.1..] run advancement grant @s only owgame:badges/team_solowin
+execute if score #teamtype id matches 6 as @a[team=red,gamemode=adventure] at @s unless entity @a[team=red,distance=0.1..] run advancement grant @s only owgame:badges/team_solowin_in6team
 
 function owgame:reset
 execute as @a[team=op] run function owgame:operator/book
