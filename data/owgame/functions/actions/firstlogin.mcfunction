@@ -11,7 +11,7 @@ tellraw @s [{"text":"気分を悪くされた場合はただちにゲームを�
 
 tellraw @s [{"text":"銃声や各種SEが大きい/小さい場合は、サウンド設定からブロックの音量で調整してください。","color":"yellow"}]
 tellraw @s [{"text":" "}]
-tellraw @s [{"text":"ゲームのバージョン：ver 0.3.1","color":"yellow"}]
+tellraw @s [{"text":"ゲームのバージョン：ver 0.3.2","color":"yellow"}]
 execute as @a[tag=!playing] at @s run playsound minecraft:entity.player.levelup block @s ~ ~ ~ 1 1
 
 scoreboard players set @s health 300

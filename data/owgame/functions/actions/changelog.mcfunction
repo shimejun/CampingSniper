@@ -1,17 +1,20 @@
 
 #変更履歴
-tellraw @s [{"text":"<前回の変更 v0.3.0→ v0.3.1>","color":"green"}]
+tellraw @s [{"text":"<前回の変更 v0.3.1→ v0.3.2>","color":"green"}]
 tellraw @s [{"text":"----修正----","color":"gold"}]
-tellraw @s [{"text":"・水中を泳いでいる間、当たり判定が正しい位置に発生しない問題を修正しました。","color":"red"}]
-tellraw @s [{"text":"・勝利関連の実績の達成条件に関する問題を修正しました。","color":"red"}]
-tellraw @s [{"text":"・救援物資が大量に落ちてくる問題を修正しました。","color":"red"}]
-tellraw @s [{"text":"・ナイフでヘルメットを破壊できる問題を修正しました。","color":"red"}]
+tellraw @s [{"text":"・弾がブロックの角を貫通する問題へ対策を行いました。","color":"red"}]
 
-tellraw @s [{"text":"----変更・追加----","color":"gold"}]
-tellraw @s [{"text":"・ヘッドショット判定を0.1ブロック下げました。","color":"yellow"}]
-tellraw @s [{"text":"・水中でダメージを受けるようになりました。","color":"yellow"}]
-tellraw @s [{"text":"・試験的に射撃パーティクルを変更しました。","color":"yellow"}]
-tellraw @s [{"text":"・公式表現を変更しました。「補給物資」→『救援物資』","color":"yellow"}]
+tellraw @s [{"text":"----変更・調整----","color":"gold"}]
+tellraw @s [{"text":"・従来よりも正確な命中判定が行われるようになりました。 (弾の的中判定を1m→0.5mごとに行うようになりました。)","color":"yellow"}]
+tellraw @s [{"text":"・弾が階段ブロックを貫通するようになりました。","color":"yellow"}]
+tellraw @s [{"text":"・チーム振り分け時、自動でチーム戦モードに変更されるようになりました。","color":"yellow"}]
+tellraw @s [{"text":"・ナイフの使用可能音を変更しました。","color":"yellow"}]
+tellraw @s [{"text":"・復活チケットの説明文を変更しました。","color":"yellow"}]
+tellraw @s [{"text":"・一部進捗の達成条件を変更しました。","color":"yellow"}]
+
+tellraw @s [{"text":"----追加----","color":"gold"}]
+tellraw @s [{"text":"・射撃時にフラッシュが発生するようになりました。","color":"green"}]
+tellraw @s [{"text":"・変更履歴のレイアウトを一部変更しました。","color":"green"}]
 
 #雑多なあれこれ
 scoreboard players reset @s changelog
