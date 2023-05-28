@@ -50,7 +50,8 @@ scoreboard objectives add play_total dummy
 scoreboard objectives add bantage_total dummy
 scoreboard objectives add changelog trigger
 scoreboard objectives add inventory dummy
-scoreboard objectives add looking dummy
+scoreboard objectives add _ dummy
+scoreboard players set #2 id 2
 #チーム
 team add solo
 team modify solo nametagVisibility hideForOwnTeam

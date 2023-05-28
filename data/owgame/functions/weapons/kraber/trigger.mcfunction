@@ -3,13 +3,17 @@
 tag @s add shoot
 
 #頭上のブロックがハーフ・階段ブロックでない場合はそのまま射出
-execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 0 unless block ~ ~1 ~ #minecraft:slabs unless block ~ ~1 ~ #minecraft:stairs run function owgame:weapons/kraber/shoot
-execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 0 unless block ~ ~ ~ #minecraft:slabs unless block ~ ~ ~ #minecraft:stairs run function owgame:weapons/kraber/shoot
+execute as @s[scores={ammo_sr=1..}] at @s if score @s sneak matches ..9 if score #punch id matches 0 unless block ~ ~1 ~ #minecraft:slabs unless block ~ ~1 ~ #minecraft:stairs anchored eyes run function owgame:weapons/kraber/shoot
+execute as @s[scores={ammo_sr=1..}] at @s if score @s sneak matches ..9 if score #punch id matches 0 unless block ~ ~ ~ #minecraft:slabs unless block ~ ~ ~ #minecraft:stairs anchored eyes run function owgame:weapons/kraber/shoot
+execute as @s[scores={ammo_sr=1..}] at @s if score @s sneak matches 10.. if score #punch id matches 0 unless block ~ ~1 ~ #minecraft:slabs unless block ~ ~1 ~ #minecraft:stairs positioned ~ ~0.5 ~ run function owgame:weapons/kraber/shoot
+execute as @s[scores={ammo_sr=1..}] at @s if score @s sneak matches 10.. if score #punch id matches 0 unless block ~ ~ ~ #minecraft:slabs unless block ~ ~ ~ #minecraft:stairs positioned ~ ~0.5 ~ run function owgame:weapons/kraber/shoot
 #頭上のブロックがハーフ・階段ブロックの場合は1ブロック先から射出
-execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 0 if block ~ ~1 ~ #minecraft:slabs run execute positioned ^ ^ ^1 run function owgame:weapons/kraber/shoot
-execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 0 if block ~ ~1 ~ #minecraft:stairs run execute positioned ^ ^ ^1 run function owgame:weapons/kraber/shoot
+execute as @s[scores={ammo_sr=1..}] at @s if score @s sneak matches ..9 if score #punch id matches 0 if block ~ ~1 ~ #minecraft:slabs anchored eyes run execute positioned ^ ^ ^1 run function owgame:weapons/kraber/shoot
+execute as @s[scores={ammo_sr=1..}] at @s if score @s sneak matches ..9 if score #punch id matches 0 if block ~ ~1 ~ #minecraft:stairs anchored eyes run execute positioned ^ ^ ^1 run function owgame:weapons/kraber/shoot
+execute as @s[scores={ammo_sr=1..}] at @s if score @s sneak matches 10.. if score #punch id matches 0 if block ~ ~ ~ #minecraft:slabs positioned ~ ~0.5 ~ run execute positioned ^ ^ ^1 run function owgame:weapons/kraber/shoot
+execute as @s[scores={ammo_sr=1..}] at @s if score @s sneak matches 10.. if score #punch id matches 0 if block ~ ~ ~ #minecraft:stairs positioned ~ ~0.5 ~ run execute positioned ^ ^ ^1 run function owgame:weapons/kraber/shoot
 
-#拳モード有効の場合は専用の射撃function実行
+#SGモード有効の場合は専用の射撃function実行
 execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 1 unless block ~ ~1 ~ #minecraft:slabs unless block ~ ~1 ~ #minecraft:stairs run function owgame:weapons/kraber/shoot_punchmode
 execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 1 unless block ~ ~ ~ #minecraft:slabs unless block ~ ~ ~ #minecraft:stairs run function owgame:weapons/kraber/shoot_punchmode
 
@@ -17,6 +21,7 @@ execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 1 if block 
 execute as @s[scores={ammo_sr=1..}] at @s if score #punch id matches 1 if block ~ ~1 ~ #minecraft:stairs run execute positioned ^ ^ ^1 run function owgame:weapons/kraber/shoot_punchmode
 
 #射撃時のあれこれ
+scoreboard players operation @s shoot_range /= #2 id
 execute if score #punch id matches 0 run scoreboard players set @s shootcounts 20
 execute if score #punch id matches 1 run scoreboard players set @s shootcounts 15
 scoreboard players remove @s[scores={ammo_sr=1..}] ammo_sr 1
