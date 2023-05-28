@@ -18,25 +18,5 @@ advancement grant @s[scores={win_total=100..}] only owgame:badges/100win
 advancement grant @s[scores={win_total=300..}] only owgame:badges/300win
 advancement grant @s[scores={kill=0}] only owgame:badges/win_withoutkill
 
-execute as @a at @s run function owgame:actions/leave
-kill @e[tag=hit_body]
-kill @e[tag=hit_head]
-tag @a remove playing
-execute as @a at @s run playsound minecraft:ui.toast.challenge_complete block @s ~ ~ ~ 1 1
-kill @e[type=chest_minecart]
-kill @e[type=item]
-kill @e[tag=package]
-
-execute as @e[tag=campfire] at @s run setblock ~ ~ ~ air replace
-execute as @e[tag=campfire] at @s run kill @s
-
-schedule clear owgame:actions/sec
-gamemode adventure @a
-schedule clear owgame:phases/showdown
-schedule clear owgame:phases/endgame
-schedule clear owgame:phases/endgame2
-schedule clear owgame:phases/cp_spawn
-team leave @a
-scoreboard players set @a head_total_1game 0
-scoreboard players reset @a id
-execute as @a[tag=op] run function owgame:operator/book
+function owgame:reset
+execute as @a[team=op] run function owgame:operator/book

@@ -24,24 +24,5 @@ execute unless entity @a[team=blue,gamemode=spectator] run advancement grant @a[
 execute as @a[team=blue,gamemode=adventure] at @s unless entity @a[team=blue,gamemode=adventure,distance=0.1..] run advancement grant @s only owgame:badges/team_clutch
 execute as @a[team=blue,gamemode=adventure] at @s unless entity @a[team=blue,distance=0.1..] run advancement grant @s only owgame:badges/team_solowin
 
-execute as @a at @s run function owgame:actions/leave
-kill @e[tag=hit_body]
-kill @e[tag=hit_head]
-tag @a remove playing
-execute as @a at @s run playsound minecraft:ui.toast.challenge_complete block @s ~ ~ ~ 1 1
-kill @e[type=chest_minecart]
-kill @e[type=item]
-kill @e[tag=package]
-
-execute as @e[tag=campfire] at @s run setblock ~ ~ ~ air replace
-execute as @e[tag=campfire] at @s run kill @s
-
-schedule clear owgame:actions/campfire_actions
-gamemode adventure @a
-schedule clear owgame:phases/showdown
-schedule clear owgame:phases/endgame
-schedule clear owgame:phases/endgame2
-team leave @a
-scoreboard players set @a head_total_1game 0
-scoreboard players reset @a id
-execute as @a[tag=op] run function owgame:operator/book
+function owgame:reset
+execute as @a[team=op] run function owgame:operator/book
